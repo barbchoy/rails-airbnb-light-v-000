@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'houses/index'
+  get 'houses/create'
+  get 'houses/new'
+  get 'houses/edit'
+  get 'houses/show'
+  get 'houses/update'
+  get 'houses/destroy'
   # get 'attractions/index'
   # get 'attractions/create'
   # get 'attractions/new'
