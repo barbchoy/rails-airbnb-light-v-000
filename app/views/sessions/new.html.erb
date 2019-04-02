@@ -1,5 +1,10 @@
 <h1>Sign In</h1>
-<%= form_tag signin_path do %>
+
+<% if flash[:message] %>
+  <%= flash[:message] %>
+<% end %>
+<br><br>
+<%=form_tag signin_path do %>
 
   <label>Name: </label>
   <%= select_tag :user_name, options_for_select(User.all.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>

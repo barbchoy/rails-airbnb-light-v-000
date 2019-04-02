@@ -3679,3 +3679,546 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/houses" for ::1 at 2019-04-01 22:25:21 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 152ms (Views: 134.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-01 22:26:53 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-01 22:26:53 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2019-04-01 22:26:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 79ms (Views: 55.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for ::1 at 2019-04-01 22:27:02 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-04-01 22:27:22 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U7GKw5H4s5LgJfH/1n1vjDvAVhqjuDfJnBL53p3oG5nhI6et3s/YwkOdoIsPnyBthNgP2PyeZ4G44hUlh1GoEg==", "user"=>{"name"=>"Barbara1", "budget"=>"10000", "guests"=>"2", "owner"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (10.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "owner") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbara1"], ["password_digest", "$2a$10$lKtwfYcTpUNESAFjslP3teNHUMdk1XQ9O6TdWJxmEetE5sJrprrWK"], ["budget", 10000], ["guests", 2], ["owner", "t"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 97ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/users/2" for ::1 at 2019-04-01 22:27:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-01 22:27:24 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for ::1 at 2019-04-01 22:27:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 72ms (Views: 65.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-01 22:27:29 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-01 22:27:29 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2019-04-01 22:27:30 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:27:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZxVRJK7kQnYs5a9neTnSckzXJF+/hZj9Azn2TNpw2s5pMePzAmtm61EIacEhEdy2mgCU1Go+A+gk/uToUupbw==", "user_name"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/signin" for ::1 at 2019-04-01 22:28:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 129ms (Views: 93.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:29:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsVMM+IfIVWFofK3H/qwkpkQkkM2u3YxD8HXiWfb9Fi1QLLBITpNFPRk+Z9yFs4zpGQQeGD/LqzJHT9niV3Evw==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 85ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-01 22:29:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-01 22:29:05 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-01 22:29:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 68.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-01 22:29:09 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-01 22:29:09 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 255ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-01 22:29:11 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 112ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2019-04-01 22:29:12 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 289ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:29:18 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yFdX0o2APat4THhgDoceLsbKYtuEP2IU/7f3baOLrgdUb8UZ0zIBOQ27z3qX574V1ZE8GatpjHirKOsnManEAw==", "user_name"=>"Barbara1", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara1"], ["LIMIT", 1]]
+Completed 403 Forbidden in 84ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/signin" for ::1 at 2019-04-01 22:31:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 112ms (Views: 85.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:31:53 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U5scIVal+VPxDowy5Xyl3rUrfesA/2s+m/f1DpArVuPsHuLTlYCVEoDLhxqIkNt/iF//0Fa7M6NdKx3gfq1mBA==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/session/new
+Redirected to 
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.4ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/signin" for ::1 at 2019-04-01 22:32:33 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:32:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vl5Awphum/Cil3ZzX/jJ5/SB2Ro8GkwfIXktBhNrr3gB274wW0v3sdNSfVsyFLdGyfVbIWpeFILnpcXo/e2fnw==", "user_name"=>"Barbara1", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara1"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Redirected to 
+Completed 500 Internal Server Error in 135ms (Views: 52.1ms | ActiveRecord: 0.6ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/signin" for ::1 at 2019-04-01 22:33:13 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:33:17 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0MbLl6RVpB7Axowi6HIcBMosHKcE5yRHHc2icCaxxrlvQzVlZ3DIX7EDhwqFnmKl91ienFKjfNrbEUqeyDf2Xg==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 135ms (Views: 52.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:33:21 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2yDLlsR9ryCQlyiTB3btxGBzjTdWwBeExC4hzMTLiDxkpTVkB1jDYeFSI7tqmpNlXQcPDACETxkC8skiKk242w==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 126ms (Views: 46.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:37:32 -0700
+  
+ActionController::RoutingError (uninitialized constant Rack::Flash):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started GET "/signin" for ::1 at 2019-04-01 22:39:01 -0700
+  
+ActionController::RoutingError (uninitialized constant Rack::Flash):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-04-01 22:39:05 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 234ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2019-04-01 22:39:08 -0700
+  
+ActionController::RoutingError (uninitialized constant Rack::Flash):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started GET "/signin" for ::1 at 2019-04-01 22:39:12 -0700
+  
+ActionController::RoutingError (uninitialized constant Rack::Flash):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-04-01 22:39:16 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2019-04-01 22:39:18 -0700
+  
+ActionController::RoutingError (uninitialized constant Rack::Flash):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started GET "/signin" for ::1 at 2019-04-01 22:45:36 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.4ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:7: syntax error, unexpected '<'
+  <label>Name: </label>
+  ^
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:7: syntax error, unexpected ':', expecting end
+  <label>Name: </label>
+             ^
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:10: unknown regexp options - labl
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:15: syntax error, unexpected '<', expecting end
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:16: syntax error, unexpected tFID, expecting do or '{' or '('
+<p>New user? '.freeze;@output_buffer.appe...
+       ^~~~~
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:21: unterminated regexp meets end of file
+          end
+              ^
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/sessions/new.html.erb:7: syntax error, unexpected '<'
+app/views/sessions/new.html.erb:7: syntax error, unexpected ':', expecting end
+app/views/sessions/new.html.erb:10: unknown regexp options - labl
+app/views/sessions/new.html.erb:15: syntax error, unexpected '<', expecting end
+app/views/sessions/new.html.erb:16: syntax error, unexpected tFID, expecting do or '{' or '('
+app/views/sessions/new.html.erb:21: unterminated regexp meets end of file
+app/views/sessions/new.html.erb:21: syntax error, unexpected end-of-input, expecting end
+Started GET "/signin" for ::1 at 2019-04-01 22:45:53 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/sessions/new.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/signin" for ::1 at 2019-04-01 22:46:19 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:17: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/sessions/new.html.erb:17: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/signin" for ::1 at 2019-04-01 22:47:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `has?' for #<ActionDispatch::Flash::FlashHash:0x00007fdc231bf600>
+Did you mean?  hash):
+    1: <h1>Sign In</h1>
+    2: 
+    3: <% if flash.has?(:message) %>
+    4:   <%= flash[:message] %>
+    5: <% end %>
+    6: 
+  
+app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb___807457862829153896_70291729252100'
+Started GET "/signin" for ::1 at 2019-04-01 22:53:42 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:3: syntax error, unexpected '['
+'.freeze; if flash.[:message] 
+                   ^
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/views/sessions/new.html.erb:21: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected '['
+app/views/sessions/new.html.erb:21: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/signin" for ::1 at 2019-04-01 22:53:51 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 84ms (Views: 80.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:53:55 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a6lBGbWV+YzyADo+Mtg0MAk2wuZPvomJTIjzrn9bGxLULL/rdrCVzYPFMRZfNEqRNEJA3Rn60RSKVBtAkd0r9Q==", "user_name"=>"Barbara1", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara1"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 170ms (Views: 87.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:54:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Py9dasF+5wLGc7GxIgFHYEZ+OzLNo5Ij5V7erJAo/lmAqqOYAluLQ7e2uplP7TnBewq5CZvnyr4jgjZCfq7Ovg==", "user_name"=>"Barbara1", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara1"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 121ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:54:15 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W7nWbeFZo/aFTpCvokmoq2/tg4CKw9Bwlke6ehlFbCDkPCifInzPt/SLm4fPpdYKUpkBu9yHiO1Qm1KU98Ncxw==", "user_name"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/signin" for ::1 at 2019-04-01 22:54:33 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:54:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sv/AtGzhYCMLu45tT1b92jQ4cRRw64sSvbnA12lYQ//1ej5Gr8QMYnp+hUUiuoN7CUzzLyav0497ZSg5h95zGA==", "user_name"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/signin" for ::1 at 2019-04-01 22:55:20 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:55:22 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YkeEtFV3VYkCV8/HvjPpr2hnrC44EXV2nsGF8wlvuCfdwnpGllI5yHOSxO/T35cOVRMuFW5VLetYHW0d5+mIwA==", "user_name"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:55:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EArCtJfU8B7eW2JC0vcyxsCJqzpxcHyaAaGcfTstSXWvjzxGVPGcX6+eaWq/G0xn/f0pASc0JAfHfXST1at5kg==", "user_name"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 100ms (Views: 90.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:55:42 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+m3FxYyj+NkE42UhQD/4M1H4jWxoRkh8wylnwMO45gVF6Ds3T4aUmHUmbgkt04aSbIwPVz4CEOEF9Y8uLT7W4g==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 133ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:55:45 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZwN+e2+hQhnGs+KKKWH2zmzXp3fqGIco/PCN5eETiOjYhoCJrIQuWLd26aJEjYhvUaMlTLxc37U6LGULD5W4Dw==", "user_name"=>"", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for ::1 at 2019-04-01 22:55:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bhPfaYNt67hx8OerzRZND8CvUlTobjtO33L2Pkb5+V7RliGbQEiH+QA17IOg+jOu/dvQb74qY9MZrh7QqH/JuQ==", "user_name"=>"Barbara1", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 81ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for ::1 at 2019-04-01 22:55:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 99ms (Views: 86.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-01 22:56:38 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 67.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/2" for ::1 at 2019-04-01 22:56:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-01 22:56:42 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+

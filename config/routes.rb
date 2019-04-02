@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'houses/index'
-  get 'houses/create'
-  get 'houses/new'
-  get 'houses/edit'
-  get 'houses/show'
-  get 'houses/update'
-  get 'houses/destroy'
+  # get 'houses/index'
+  # get 'houses/create'
+  # get 'houses/new'
+  # get 'houses/edit'
+  # get 'houses/show'
+  # get 'houses/update'
+  # get 'houses/destroy'
   # get 'attractions/index'
   # get 'attractions/create'
   # get 'attractions/new'
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   root 'welcome#home'
 
   resources :users, only: [:show, :new, :create, :update]
-  resources :attractions
+  resources :houses
   resources :rides, only: [:create]
 
   get '/signup', to: "users#new"
