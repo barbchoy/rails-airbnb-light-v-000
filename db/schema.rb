@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_30_063855) do
+ActiveRecord::Schema.define(version: 2019_03_30_061729) do
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 2019_03_30_063855) do
     t.integer "location_rating"
     t.integer "value_rating"
     t.integer "reviews_count"
+    t.integer "owner_id"
+    t.index ["owner_id"], name: "index_houses_on_owner_id"
   end
 
   create_table "stays", force: :cascade do |t|
-    t.string "user_id"
+    t.string "guest_id"
     t.string "house_id"
   end
 
@@ -33,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_03_30_063855) do
     t.string "password_digest"
     t.integer "budget"
     t.integer "guests"
-    t.boolean "owner"
+    t.boolean "owner", default: false
   end
 
 end

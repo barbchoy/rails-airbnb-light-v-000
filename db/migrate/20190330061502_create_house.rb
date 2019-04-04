@@ -9,6 +9,8 @@ class CreateHouse < ActiveRecord::Migration[5.2]
       t.integer :location_rating
       t.integer :value_rating
       t.integer :reviews_count
+      t.references :owner
     end
   end
+
 end

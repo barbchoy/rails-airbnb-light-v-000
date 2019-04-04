@@ -4222,3 +4222,848 @@ Processing by HousesController#index as HTML
 Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.2ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToHouses (20190403002520)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.6ms)[0m  [1m[35mALTER TABLE "houses" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190403002520"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (55.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer, "owner_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_houses_on_owner_id" ON "houses" ("owner_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-03 01:00:00.152877"], ["updated_at", "2019-04-03 01:00:00.152877"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-03 01:03:02.928095"], ["updated_at", "2019-04-03 01:03:02.928095"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (39.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (41.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (70.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (36.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (22.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-03 23:46:55.700440"], ["updated_at", "2019-04-03 23:46:55.700440"]]
+  [1m[35m (227.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (40.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-04 00:00:53.743713"], ["updated_at", "2019-04-04 00:00:53.743713"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/logout" for ::1 at 2019-04-03 17:00:54 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-03 17:00:54 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 222ms (Views: 207.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-03 17:03:42 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 80ms (Views: 49.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2019-04-03 17:03:55 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CG6F2yR4B2IZLv46F/ob+267Nr4u+GTlSIhi866PTz26/Ki1a09sMrqWr07OGFQa0aNvfHHeNK1seI4ItDb8tg==", "user"=>{"name"=>"Barbara", "budget"=>"5000", "guests"=>"7", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:13:in `create'
+Started POST "/users" for ::1 at 2019-04-03 17:04:24 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zTIcun1GrGijf7fK2ySvipiAZfiC65ZkPyfsTmJYF6Zyt+JIvmPAKdK6vOK2yNErpfTnw9Svzvn5+wSgjN4nQQ==", "user"=>{"name"=>"Barbara", "budget"=>"5000", "guests"=>"7", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "owner") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbara"], ["password_digest", "$2a$10$fmI19owLeVlfiyW.YkYKauXvO4UKFPugmPbZZb4uZ5rZ7tvRH0UEa"], ["budget", 5000], ["guests", 7], ["owner", nil]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 85ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-04-03 17:04:24 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 84ms (Views: 63.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-03 17:05:37 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 43.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for ::1 at 2019-04-03 17:06:07 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-03 17:06:07 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-03 17:06:08 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-04-03 17:06:16 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GmTYFLfwPsJD1QfIGhmxNluE7BOr/5kbnn7bHWOfr5ao9vV6+MdVkuBtVrzD+/7X5Jy10fTZyVO6jjfmeSYcHQ==", "user"=>{"name"=>"Barbara", "budget"=>"5000", "guests"=>"8", "owner"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "owner") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbara"], ["password_digest", "$2a$10$t9hlxagQGfwVk8YjCojqteGvoA.w8p247UcBKjrjh7FMSqsbaZfgK"], ["budget", 5000], ["guests", 8], ["owner", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 110ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/2" for ::1 at 2019-04-03 17:06:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-03 17:06:27 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$izE48VCiSMnV0e4wchIlL.gjVVJzve.8Vza6JOyEzhO1U9B6.AQf."], ["budget", 100], ["guests", 3]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$T2Lrfnpf19m3N1NRGx3UEOSpIZ7ggFVtd8hklOvwNr1Y2/DY7vy.S"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$4AlzPdPO6ZoWl9KOq/He1.RtQDtnRA8Ggk9LcW/kNQ9WWBNeMnic."], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$nHlRmfB/sCE5cKx2qA671OC7h1mqSwVg8q6qpS/g/O3KjSMg4zoTC"], ["budget", 400], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$o3MSuHIqN3jjwxSbCKGeOeGFLwfGAoyngGMJ0cRHZEUmtmvVioXU6"], ["budget", 800], ["guests", 4]]
+  [1m[35m (17.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$mzJ3ciAaRCjdVpVAd5GxIeSS8WyvUxQyGXXT.hPy0jCBXqKzwdb2i"], ["budget", 1000], ["guests", 5]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$Zz5zzMZ5y0BFTMN1kwYq2u24moBlR3rSUEIwjmurQr.YmvB4Chzf."], ["budget", 600], ["guests", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$qMMIsnnWc1sxxMjk4ygiTOaaOgY.x21NJD0jQILpjWjfhC0qjK9qm"], ["budget", 700], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$IQN4faceZc6sd8wAXezrL.Tso2PVmLVoUmKl4kvN6TTKIVRtwVdCG"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$yJa95Yvsus8fMMxO/CjCKut.hzCv8Yvt8bYheXpTZcy2Q1WDZ.D.S"], ["owner", "t"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$hcic12GjHVVbONskuZKRZ.n6SM90rsEfxxXQdL3z1/45fv6kaae66"], ["owner", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$.m5HZmFl2cE/UYqD6oMGcOGfQr7U1YLWryR0FgPPwES33eQVwXvaC"], ["budget", 100], ["guests", 3]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$K/qQzYatVTmVGaFMUIfxHeRP0b6zpVAbauXKHTbfm33nfZJNa.42y"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$9DD6BxzBK7w5Odznt490hOKv.BHtk20UnWb05MFomOx73NIg.tlc6"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$VV0mpvU8SRY9qc3pA6./k.7uMOxUYAoHGCqm2GEEuBP0GYicuyOTa"], ["budget", 400], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$DAmBN//J8fMsV4f6FF/vd.Olv3maXx56D0vURX.10XfDYdpo3glym"], ["budget", 800], ["guests", 4]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (4.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$ehd5cKJco8Ai6RV9Fh7GZOlbWC2TcDz.JlIQrymTcPQrkqUgTaJ2C"], ["budget", 1000], ["guests", 5]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$.fGKyUVDVatFP6FJste7luWKzKbv7Ls77loaPDiKguYpDlKRdKPQO"], ["budget", 600], ["guests", 3]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$okuLep.GOH4OwWcBufK/sONDi5qymGGnTUvLLxhIYFbjfMT1ETIwW"], ["budget", 700], ["guests", 4]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$1evz78cNqSQDudHhbQ0uduPlKQ0rTDsWYMnRNOa4hjMzLdPKgihiu"], ["budget", 500], ["guests", 3]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$yPmpmvec9vQ3S6mciA8me.OzRHfrw3lc1Kwf9r2EiZxGe4.e01tlS"], ["owner", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$mtTyMFGh4F3jE0RbFLnPOehjZRnmwWtSF5sB8CVyibDnlQPNVFmS6"], ["owner", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$ewm51/dGrJGyReo.xXTaQelJbeC6mt5GyIE/3Yr6Aqo24kxtFmjG2"], ["budget", 100], ["guests", 3]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$QJsN/5ATtYn312GItgBLr.4kbkU6xYoQRBSpomYxyZQ46zPuwdK76"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$oNUh/DEa7ULRdfr9djgqyu7kw2bSqguVmAfsVGf5oG3Kz4j8Hfdbe"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (9.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$npX/USYauW3HkuI6umaZweP1QJrS/JZFClmq8A7BVT1pRXQv0e3XO"], ["budget", 400], ["guests", 4]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$IfeHexHkrDoYj57OfMPdo.UfMae65TAbREII3YkcgevrW3q..0pJa"], ["budget", 800], ["guests", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$th3LMV/GdDII2bNI9EZlD.uEEmfIU8NZ0sbyyR/Gnyfhcq4kwbOSa"], ["budget", 1000], ["guests", 5]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$VctaDZUyHqgJTlnnqDdx5u8t7Yc2WxtCBi4uXBIBZfXONJVP/dhWC"], ["budget", 600], ["guests", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$EidZuPq0KWpHBVqJUpHLY.TpBh7Jnwvj131T4fly2K2YpyHf/9uUe"], ["budget", 700], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$Icv7HXSFJOGVnYPqRb0mZuTk0g.qlVzxyEnUbfmz8aa1RBFvpj3YK"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (6.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$JZIVHKoFaRfovMnFQIKeS.h9vUb8szLEBXsiZDdVZb/W0nVTm5xs2"], ["owner", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$dfyU78pMK/rJn8TMsbH/qe3nBkO2LKB0orHsMK3K1dgXFnC2GnV5C"], ["owner", "t"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$KiUX.t0ELTBJv2DSUq7mvukR97vRi4N9/hx167/.nY48pnjde1MQm"], ["budget", 100], ["guests", 3]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$KcXcS.bpZH6XAtj1a1EMl.yrgvjpVJ9Rq1NjM9NKjn6vHxMA1SOXG"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$h5md1gKy0d4J9aWktXWKYeSCjhdwVNSi0Pf0c4r2evIzAZ3lJfLay"], ["budget", 350], ["guests", 2]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$5TiiJ9Wm/P61WFA/ocRwYuGOyPPY3NEuIykxz91q0jmU2GQtVN9wO"], ["budget", 400], ["guests", 4]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (20.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$pIhjlLI0KfSDb0IffE76W.QrKot38bgIGhLzWZUguYrHzET2H6uxq"], ["budget", 800], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$o/x/IMo6ceflEBBCbZx.tOLtbBniRvmLAuzEd4ZAp7NW5GGFJpLkC"], ["budget", 1000], ["guests", 5]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$lIrvjmq/YDVTuHqqt.WYpOhUu1y6g8yGb8I9r.mhlZiSbrbo9O.02"], ["budget", 600], ["guests", 3]]
+  [1m[35m (38.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$3/AM6MhP2i6yckG04b9cZeLD2/daf.MgyuuteLuLNRE5BI2B2OHR2"], ["budget", 700], ["guests", 4]]
+  [1m[35m (114.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (20.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$ZzXVKWmrSbpP2mJOtcv2pel5OTPuVIpbESW.esIMghn5PTjIM81Di"], ["budget", 500], ["guests", 3]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$7Ita2EppwFggoK/4jDALWO/Zj3ziCtuwyyXV3OviJED11ryVVyf.S"], ["owner", "t"]]
+  [1m[35m (28.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (10.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$1owQurJP.ZdiZWM4skMy6eRl95IVbgvx0DY21U23CLsnf5QqXshPi"], ["owner", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer, "owner_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_houses_on_owner_id" ON "houses" ("owner_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-04 00:48:29.371789"], ["updated_at", "2019-04-04 00:48:29.371789"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (7.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$RPSCSoaPHvddFTrE8fV59OMP77Aeg1MoftEaRZrM65wkBlAYOQMUa"], ["budget", 100], ["guests", 3]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$8liZVpSsjCmASHKsezkHo.J6nrR5QGVwmlgv60d4j/JCARp.QF1PW"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$49zfl0fMOTsDxuGdJiV55OFKOqLgzyhrguU3rZTNZAyqguXeGTyx6"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$slV1NTBzrJTjH5stz8s0lutAvAmweKw58zYzUPtNBOQsU/VAMMDpe"], ["budget", 400], ["guests", 4]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$28lrb1SsoowSD6ytRKsNKOO8NzbFDPuLyOXXyEPHahuucnGRgpPpi"], ["budget", 800], ["guests", 4]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$uC.Z7aEyb9XHuYUzg3OkZeR1BZiBK8UXC36f0nPADrrOO/gHdXYb."], ["budget", 1000], ["guests", 5]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$wDqzlSHNhqv2f0mygqRZXuuiqUzpAcfHzL0jfLetTt5Ewxl2dEx1y"], ["budget", 600], ["guests", 3]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$otSSwUwL3iBu0zhSs9hfUuFcorWZomt03y6I.Y/NbKOHsaNHPiTnC"], ["budget", 700], ["guests", 4]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$tXqMGhGw7hVGJ7qKzRsc5.76axjB4.FCjGgS0F1QOYxxrHgiKhx0C"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$.uXhlTeNDklrdK4/HXdVq.ef4voidwBNflgf0onYpBYAD2oBB1qM."], ["owner", "t"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$HHYknUdLee7Onu4d2/jbUeNHNjvqjfeKlqJQPcmiB.l8qXnY0W9W."], ["owner", "t"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer, "owner_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_houses_on_owner_id" ON "houses" ("owner_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "guest_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-04 00:51:09.289857"], ["updated_at", "2019-04-04 00:51:09.289857"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$b4vM.UwlqY.chPAw/UPpA.4qfJxTAg7cvfC2Uyjw4sYDamHM9zSWi"], ["budget", 100], ["guests", 3]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$tkQHuHeg.iu8JDFaOwBGOe9fpJTrANafVnUyQs8hhU1J2JeUrfXjm"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$GYusRAQcPql/p8sRsIbyk.Gz8rklgAlqsoAClwvGeGDcnTEJkZprm"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$XG1t.ya0H6/XxSqlOkaDrewIJhrzuS29lFHa9oi515rdK28WljumO"], ["budget", 400], ["guests", 4]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$bS08RLyERvOXcQcW391IiusegrPkVtvT1BrZkq8AVd41uM42OToju"], ["budget", 800], ["guests", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$K.g5Dj1fX2cLpwCd/znN7eAWA.J58rtk2wqTziuCQWghXMfLtKoVq"], ["budget", 1000], ["guests", 5]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$LergPnbcWFZ7SWlF1svOF.y5Rr2x0.9jvEoor42nQ1q.At42LgAp6"], ["budget", 600], ["guests", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$YBwg8bGZAZnEpcCT.EPNF.EdLDT5xCM8U.CxXzbF0QFND2jovoprO"], ["budget", 700], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$6gzKjPL9rWHg0bFh9jKtVe8nSGl7Mqt1cXGs3QoXGyFrchYCJWr5i"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$V6jmQg0f40peRdGGHC.K2eFV.OrsGJ8qk2xUWmygsH5SyhuB2y6PS"], ["owner", "t"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$cbTh4b5At.tuFaMLjkyMa.GtlxrhSUEVshkrzSAW3JEpiTSQOAnjq"], ["owner", "t"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$P0Fue8kTgUaUz2PYZRAJx.jzTVtMN.fcvL6EpWeldybSWmKBUB4Ga"], ["budget", 100], ["guests", 3]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$pMA35TfoqQECtE.gZBGjEuxXYeo1vFrWc7kLRE4J9RXXmHoEMFyVa"], ["budget", 500], ["guests", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$vmZHaOBZ8Qe5ByapnESgPOETlBQ0VJWZskfCOBnkts/oDjooDbq.a"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$VdTjjgApWN5sRKJq22K1B.Hk69CjUVtVC/DXpxnc2koRTLX6w7jNq"], ["budget", 400], ["guests", 4]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$.YA3UN.fqWaXiLiddLR4YePc9oGNXPh7JL/7Ne9fs6VVuMEMT92Pa"], ["budget", 800], ["guests", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$k07SCRMPgK1/ITmByudioO3hp3xJojc7jA.9isqO8tmO0WJE5Fsre"], ["budget", 1000], ["guests", 5]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$rHZZdD51VkL2zDfwuEbwieboZmUX22YnDVceo/TVGaVdtaB/CxHxK"], ["budget", 600], ["guests", 3]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$mEds38SXTc.sLyDj/CPdheCmlXGDpG6o6EB.eJTL.YM3n1d0NUx7O"], ["budget", 700], ["guests", 4]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$zk//yF6y5H39DOQwwSKXTOuyafSD5cLNzAV2xnoGYa1w6Uvs5PmeK"], ["budget", 500], ["guests", 3]]
+  [1m[35m (43.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$hXf2/Wx5zS86Pyx9M/n0eern0.Kfq1NXJyqU6tjFvbnK8j3OOQGim"], ["owner", "t"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$ogzxKCCy6WGtZWsuf7I/NOiy0WqLVjWaOgvGZJwRikm5W5DEZhRbW"], ["owner", "t"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Studio Guest House Hot Tub Wifi"], ["price_per_night", 93], ["city", "South Lake Tahoe"], ["max_guests", 2], ["cleanliness_rating", 4], ["location_rating", 4], ["value_rating", 4], ["reviews_count", 379], ["owner_id", 22]]
+  [1m[36mStay Create (0.4ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "16"], ["house_id", "1"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Amazing A-frame cabin with hot tub, 2 fireplaces & more"], ["price_per_night", 154], ["city", "Tahoe City"], ["max_guests", 8], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 4], ["reviews_count", 50], ["owner_id", 21]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "14"], ["house_id", "2"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rustic Chic Cabin Walk 2 Lake Woodstove Fireplace"], ["price_per_night", 86], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 3], ["value_rating", 4], ["reviews_count", 86], ["owner_id", 11]]
+  [1m[36mStay Create (0.2ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "18"], ["house_id", "3"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pine Cone the Awesome (Sunnyside)"], ["price_per_night", 131], ["city", "Tahoe City"], ["max_guests", 16], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 192], ["owner_id", 11]]
+  [1m[36mStay Create (0.2ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "5"], ["house_id", "4"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (2.3ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Classic, Lake Tahoe cabin on double lot w/ WiFi & fireplace!"], ["price_per_night", 126], ["city", "Carnelian Bay"], ["max_guests", 11], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 41], ["owner_id", 11]]
+  [1m[36mStay Create (0.2ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "6"], ["house_id", "5"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Awesome Lakeview Hot TUB-Birds Eye Lookout-SAUNA"], ["price_per_night", 250], ["city", "Tahoe City"], ["max_guests", 10], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 5], ["reviews_count", 161], ["owner_id", 22]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "16"], ["house_id", "6"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Steps to Heavenly and Stateline"], ["price_per_night", 112], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 5], ["reviews_count", 166], ["owner_id", 22]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "14"], ["house_id", "7"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cozy Condo In the Heart of Incline"], ["price_per_night", 56], ["city", "Incline Village"], ["max_guests", 10], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 5], ["reviews_count", 120], ["owner_id", 10]]
+  [1m[36mStay Create (0.8ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "4"], ["house_id", "8"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Heavenly Cabin"], ["price_per_night", 175], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 33], ["owner_id", 11]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "12"], ["house_id", "9"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/houses" for ::1 at 2019-04-03 17:52:32 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 149ms (Views: 144.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mHouse Load (1.8ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mHouse Load (0.5ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" ORDER BY "houses"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+Started GET "/users/2" for ::1 at 2019-04-03 17:53:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 86ms (Views: 73.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for ::1 at 2019-04-03 17:53:59 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  Rendered houses/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+
+

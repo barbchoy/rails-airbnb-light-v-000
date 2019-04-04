@@ -1,5 +1,5 @@
 class Stay < ApplicationRecord
-  belongs_to :user
+  belongs_to :guest, :class_name => "User"
   belongs_to :house
 
   def stay_here(days)
