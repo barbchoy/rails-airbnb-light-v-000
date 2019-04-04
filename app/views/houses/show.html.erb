@@ -1,2 +1,27 @@
-<h1>Houses#show</h1>
-<p>Find me in app/views/houses/show.html.erb</p>
+<h1><%= @house.name %><h1>
+<h2><%=@house.city%></h2>
+
+
+<p>Price Per Night: $<%=@house.price_per_night%></p>
+<p>Max guests: <%=@house.max_guests%></p>
+<p>Cleaniless rating: <%=@house.cleanliness_rating%></p>
+<p>Location rating: <%=@house.location_rating%></p>
+<p>Value rating: <%=@house.value_rating%></p>
+
+<%=@house.reviews_count%> reviews <br><br>
+
+
+
+
+<%= form_tag stays_path, method: :post  do %>
+<%= hidden_field_tag(:guest_id, current_user.id) %>
+<%= hidden_field_tag(:house_id, @house.id) %>
+<% if current_user.owner == true %>
+  <%= link_to "Edit House", edit_house_path(@house)%>
+<% else %>
+  <label>How many days are you going to stay?</label>
+  <%= text_field_tag :days %><br>
+  <%= submit_tag "Book This House"%>
+<% end %>
+
+<% end %>

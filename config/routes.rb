@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'stays/create'
   # get 'houses/index'
   # get 'houses/create'
   # get 'houses/new'
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :new, :create, :update]
   resources :houses
-  resources :rides, only: [:create]
+  resources :stays, only: [:create]
 
   get '/signup', to: "users#new"
   get '/signin', to: "sessions#new"

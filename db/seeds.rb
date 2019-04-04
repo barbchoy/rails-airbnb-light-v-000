@@ -86,20 +86,4 @@ def make_houses_owner_and_stays
   end
 end
 
-# def make_attractions_and_rides
-#   DATA[:attractions].each do |attraction|
-#     new_attraction = Attraction.new
-#     attraction.each_with_index do |attribute, i|
-#       new_attraction.send(DATA[:attraction_keys][i] + "=", attribute)
-#     end
-#     rand(1..8).times do
-#       customers = []
-#       User.all.each {|u| customers << u if u.admin != true}
-#       new_attraction.users << customers[rand(0...customers.length)]
-#     end
-#     new_attraction.users.each {|c| c.save}
-#     new_attraction.save
-#   end
-# end
-
 main
