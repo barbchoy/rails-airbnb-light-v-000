@@ -1,7 +1,9 @@
 
-<p>Name: <%= @user.name %></p>
-<p>Budget: <%= @user.budget %></p>
-<p>Guests in the party: <%= @user.guests %></p>
+<% if @message %>
+<p><%= @message %></p>
+<% end %>
+
+<%= render partial: 'form', locals: {user: @user} %>
 <% if @user.owner == true %>
 <p>OWNER</p>
 <% end %>

@@ -1,10 +1,12 @@
+<%=render partial: 'users/form', locals: {user: current_user} %>
 <h1>Houses#index</h1>
+
 <p>Find me in app/views/houses/index.html.erb</p>
 <% @houses.each do |house| %>
   <% if house.owner == current_user %>
     <p><%=house.name%> <%= link_to "Show/Edit #{house.name}", house_path(house)%></p>
   <% else %>
-    <p><%=house.name%> <%= link_to "View", house_path(house)%></p>
+    <p><%=house.name%> , max <%=house.max_guests%> guests, $<%=house.price_per_night%> per night <%= link_to "View", house_path(house)%></p>
   <% end %>
 <% end %>
 <% if current_user.owner == true %>

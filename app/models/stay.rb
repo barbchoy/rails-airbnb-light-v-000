@@ -2,16 +2,18 @@ class Stay < ApplicationRecord
   belongs_to :guest, :class_name => "User"
   belongs_to :house
 
-  def stay_here(days)
+  def stay_at_this_house(days)
     @cost = self.house.price_per_night * days
-    binding.pry
     if @cost > self.guest.budget
-      "Sorry #{days} days in #{self.house.name} is over your budget."
+      "Sorry you do not have enough account balance to stay #{days} days in #{self.house.name}.\n
+      Please choose another house."
     elsif self.guest.guests > self.house.max_guests
-      "Sorry you have exceeded the maximum number of guests allowed in #{self.house.name}."
+      "Sorry you have exceeded the maximum number of guests allowed in #{self.house.name}.\n
+      Please choose another house."
     else
       self.guest.budget -= @cost
-      "Thank you for staying in #{self.house.name}."
+      self.guest.save
+      "Thank you for staying in #{self.house.name}. $#{@cost} has been deducted from your account balance."
     end
   end
 end
