@@ -7,7 +7,6 @@ class HousesController < ApplicationController
     @house = House.create(house_params)
     @house.owner = current_user
     @house.save
-    binding.pry
     redirect_to house_path(@house)
   end
 
@@ -15,6 +14,7 @@ class HousesController < ApplicationController
   end
 
   def edit
+    @house = House.find(params[:id])
   end
 
   def show
@@ -22,6 +22,13 @@ class HousesController < ApplicationController
   end
 
   def update
+    @house = House.find(params[:id])
+    if @house.update_attributes(house_params)
+      redirect_to house_path(@house)
+    else
+      render 'edit'
+    end
+
   end
 
   def destroy

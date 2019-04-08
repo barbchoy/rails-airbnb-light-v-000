@@ -8,7 +8,7 @@ class CreateHouse < ActiveRecord::Migration[5.2]
       t.integer :cleanliness_rating
       t.integer :location_rating
       t.integer :value_rating
-      t.integer :reviews_count
+      t.integer :reviews_count, :default => 0
       t.boolean :pets_allowed
       t.references :owner
     end

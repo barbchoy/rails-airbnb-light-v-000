@@ -12326,3 +12326,469 @@ Processing by HousesController#edit as HTML
 Completed 200 OK in 92ms (Views: 63.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/users/13" for 127.0.0.1 at 2019-04-08 15:35:29 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 96ms (Views: 66.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 15:35:30 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (0.6ms)
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 102ms (Views: 64.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/houses/9" for 127.0.0.1 at 2019-04-08 15:35:38 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/houses/9/edit" for 127.0.0.1 at 2019-04-08 15:35:39 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/edit.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2019-04-08 15:35:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 15:35:53 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.2ms)
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 16:30:01 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (0.7ms)
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 315ms (Views: 312.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/houses/9" for 127.0.0.1 at 2019-04-08 16:30:12 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses/9/edit" for 127.0.0.1 at 2019-04-08 16:30:15 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/edit.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 115.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/houses/7" for 127.0.0.1 at 2019-04-08 16:33:40 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/stays" for 127.0.0.1 at 2019-04-08 16:33:44 -0700
+Processing by StaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3GZSDaMlG8ASDy6VKcXia3eFusOYUHPQfDYZaVxSuZDiNkuJsVazEpXC7NE72W5c5YCB0dDcuvWXe+KSSkSsYw==", "guest_id"=>"13", "house_id"=>"7", "days"=>"2", "commit"=>"Book This House"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStay Create (0.5ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "13"], ["house_id", "7"]]
+  [1m[35m (32.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 34.3ms)
+
+
+  
+ArgumentError (comparison of Integer with nil failed):
+  
+app/models/stay.rb:7:in `>'
+app/models/stay.rb:7:in `stay_at_this_house'
+app/controllers/stays_controller.rb:4:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-08 16:37:04 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2019-04-08 16:37:06 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 16:37:08 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.0ms)
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/houses/9" for 127.0.0.1 at 2019-04-08 16:37:11 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 16:37:14 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.1ms)
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/houses/6" for 127.0.0.1 at 2019-04-08 16:37:16 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 16:37:19 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.0ms)
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 94ms (Views: 89.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/houses/10" for 127.0.0.1 at 2019-04-08 16:37:23 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:37:27 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/edit.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:39:02 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"houses", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Houses#edit</h1>
+    2: <p>Find me in app/views/houses/edit.html.erb</p>
+    3: <%= form_tag house_path(@house), method: :patch do%>
+    4: <%= render 'house' %>
+    5: <%= submit_tag "Update House" %>
+    6: <% end %>
+  
+app/views/houses/edit.html.erb:3:in `_app_views_houses_edit_html_erb___2077370466256177996_70262495337980'
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:40:05 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_house.html.erb (1.3ms)
+  Rendered houses/edit.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 159ms (Views: 122.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:42:04 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_house.html.erb (0.7ms)
+  Rendered houses/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/houses/10" for 127.0.0.1 at 2019-04-08 16:42:09 -0700
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fzUY5ki6jj9zCgsD2tiBS5yqHUOnErnyz9q6aXiMNys4dGfqyB36XD6JsdNroTH1T3mDeOO0pJEbnZBtxQhPOA==", "house"=>{"name"=>"Great summer palace", "price_per_night"=>"100", "city"=>"South Lake Tahoe", "max_guests"=>"10", "pets_allowed"=>"true"}, "commit"=>"Update House", "id"=>"10"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant HousesController::Attraction):
+  
+app/controllers/houses_controller.rb:26:in `update'
+Started GET "/houses/10" for 127.0.0.1 at 2019-04-08 16:42:24 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 79ms (Views: 54.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:42:32 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_house.html.erb (1.6ms)
+  Rendered houses/edit.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/houses/10" for 127.0.0.1 at 2019-04-08 16:42:34 -0700
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4c5P8uDfaG6ZoK8Ch1+O/XGgZseMJQ4VGa1anKsxsi2OCP6I0niLGfJbwSPaG1vXI88e9Ylol5C28S/YDl9ESA==", "house"=>{"name"=>"Great summer palace", "price_per_night"=>"100", "city"=>"South Lake Tahoe", "max_guests"=>"10", "pets_allowed"=>"true"}, "commit"=>"Update House", "id"=>"10"}
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `attraction_path' for #<HousesController:0x00007fce85060468>):
+  
+app/controllers/houses_controller.rb:28:in `update'
+Started GET "/houses/10" for 127.0.0.1 at 2019-04-08 16:42:50 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 124ms (Views: 100.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:42:52 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_house.html.erb (2.2ms)
+  Rendered houses/edit.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 126.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/houses/10" for 127.0.0.1 at 2019-04-08 16:42:55 -0700
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRbg+VmsrBQAWbINC71dMDLPHaePLYCcaMsljK4STJfu0FGDawtPY2ui3CxW+YgaYKBllYpgGRnHl1DIC3y68g==", "house"=>{"name"=>"Great summer palace", "price_per_night"=>"100", "city"=>"South Lake Tahoe", "max_guests"=>"10", "pets_allowed"=>"true"}, "commit"=>"Update House", "id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/houses/10
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/houses/10" for 127.0.0.1 at 2019-04-08 16:42:55 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.1ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:42:57 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_house.html.erb (1.4ms)
+  Rendered houses/edit.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/houses/10" for 127.0.0.1 at 2019-04-08 16:43:00 -0700
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"10exmu0SkSCzKxpEI6g85QQLGy57FGlCZ6Jsbh/Q6oK4gQDg37VyV9jQdGV+7OnPVmRjHH5Z8MfI/hkqur4c5w==", "house"=>{"name"=>"Great summer palace", "price_per_night"=>"100", "city"=>"South Lake Tahoe", "max_guests"=>"10", "pets_allowed"=>"true"}, "commit"=>"Update House", "id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/houses/10
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/houses/10" for 127.0.0.1 at 2019-04-08 16:43:00 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.1ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses/10/edit" for 127.0.0.1 at 2019-04-08 16:43:07 -0700
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_house.html.erb (1.5ms)
+  Rendered houses/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/houses/10" for 127.0.0.1 at 2019-04-08 16:43:11 -0700
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8I+8nkcZbqD1F1VejQCxUx/DtkKPI/6F5lG5Sm8eH/sBI+IS7uGzegvM3QncNfvHhB26w9xFn+4xTOhjNKOGg==", "house"=>{"name"=>"Great summer palace", "price_per_night"=>"200", "city"=>"South Lake Tahoe", "max_guests"=>"10", "pets_allowed"=>"false"}, "commit"=>"Update House", "id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mHouse Update (0.9ms)[0m  [1m[33mUPDATE "houses" SET "price_per_night" = ?, "pets_allowed" = ? WHERE "houses"."id" = ?[0m  [["price_per_night", 200], ["pets_allowed", "f"], ["id", 10]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/houses/10
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/houses/10" for 127.0.0.1 at 2019-04-08 16:43:11 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.4ms)
+
+

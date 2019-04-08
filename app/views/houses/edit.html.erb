@@ -1,2 +1,6 @@
 <h1>Houses#edit</h1>
 <p>Find me in app/views/houses/edit.html.erb</p>
+<%= form_tag house_path(@house), method: :patch do%>
+<%= render 'house' %>
+<%= submit_tag "Update House" %>
+<% end %>
