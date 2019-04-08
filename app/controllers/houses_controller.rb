@@ -5,6 +5,9 @@ class HousesController < ApplicationController
 
   def create
     @house = House.create(house_params)
+    @house.owner = current_user
+    @house.save
+    binding.pry
     redirect_to house_path(@house)
   end
 
