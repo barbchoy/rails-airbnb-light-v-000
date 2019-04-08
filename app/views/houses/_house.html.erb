@@ -1,14 +1,15 @@
-<label>Title for the house:</label><br>
+<label>Title for the house: </label>
 <%= text_field_tag :'house[name]'%><br>
 
-<label>Price per night (US dollars):</label><br>
+<label>Price per night (US dollars): </label>
 $ <%= text_field_tag :'house[price_per_night]'%><br>
 
-<label>City</label><br>
+<label>City: </label>
 <%= text_field_tag :'house[city]'%><br>
 
-<label>Maximum number of guests allowed</label><br>
+<label>Maximum number of guests allowed: </label>
 <%= text_field_tag :'house[max_guests]'%><br>
 
-<label>Are pets allowed?</label><br>
-<%= text_field_tag :'house[pets]'%><br>
+<label>Are pets allowed? </label>
+<%= hidden_field_tag :'house[pets_allowed]', false %>
+<%= check_box_tag :'house[pets_allowed]' %><br>

@@ -9,7 +9,7 @@
 
 DATA = {
   :user_keys =>
-    ["name", "budget", "guests", "pets", "password"],
+    ["name", "balance", "guests", "pets", "password"],
   :users => [
     ["Max Charles", 100, 3, true, "password"],
     ["Skai Jackson", 500, 6, true, "password"],

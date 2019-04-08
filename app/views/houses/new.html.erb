@@ -1,2 +1,8 @@
 <h1>Houses#new</h1>
 <p>Find me in app/views/houses/new.html.erb</p>
+
+<%=form_tag houses_path do %>
+<%= render 'house' %>
+<%= submit_tag "Create House" %>
+
+<% end %>

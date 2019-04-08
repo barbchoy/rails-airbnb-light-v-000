@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_03_30_061729) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
-    t.integer "budget"
+    t.integer "balance"
     t.integer "guests"
     t.boolean "pets", default: false
     t.boolean "owner", default: false
