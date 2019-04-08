@@ -7,6 +7,7 @@
 <p>Cleaniless rating: <%=@house.cleanliness_rating%></p>
 <p>Location rating: <%=@house.location_rating%></p>
 <p>Value rating: <%=@house.value_rating%></p>
+<p>Pets allowed: <%="Yes" if @house.pets_allowed%><%="No" if !@house.pets_allowed%></p>
 
 <%=@house.reviews_count%> reviews <br><br>
 

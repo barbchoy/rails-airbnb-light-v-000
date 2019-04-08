@@ -6,7 +6,7 @@
   <% if house.owner == current_user %>
     <p><%=house.name%> <%= link_to "Show/Edit #{house.name}", house_path(house)%></p>
   <% else %>
-    <p><%=house.name%> , max <%=house.max_guests%> guests, $<%=house.price_per_night%> per night <%= link_to "View", house_path(house)%></p>
+    <p><%=house.name%> , max <%=house.max_guests%> guests, $<%=house.price_per_night%> per night, Pets allowed: <%="Yes" if house.pets_allowed%><%="No" if !house.pets_allowed%> <%= link_to "View", house_path(house)%></p>
   <% end %>
 <% end %>
 <% if current_user.owner == true %>

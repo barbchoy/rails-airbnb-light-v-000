@@ -8,6 +8,7 @@ class UsersController < ApplicationController
         password: params[:user][:password],
         budget: params[:user][:budget],
         guests: params[:user][:guests],
+        pets: params[:user][:pets],
         owner: params[:user][:owner])
     log_in(@user)
     redirect_to user_path(@user)

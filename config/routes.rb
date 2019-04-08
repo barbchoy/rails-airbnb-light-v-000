@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
-  resources :users, only: [:show, :new, :create, :update]
+  resources :users
   resources :houses
   resources :stays, only: [:create]
 

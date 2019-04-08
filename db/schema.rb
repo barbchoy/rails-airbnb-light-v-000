@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_30_061729) do
     t.integer "location_rating"
     t.integer "value_rating"
     t.integer "reviews_count"
+    t.boolean "pets_allowed"
     t.integer "owner_id"
     t.index ["owner_id"], name: "index_houses_on_owner_id"
   end
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_03_30_061729) do
     t.string "password_digest"
     t.integer "budget"
     t.integer "guests"
+    t.boolean "pets", default: false
     t.boolean "owner", default: false
   end
 

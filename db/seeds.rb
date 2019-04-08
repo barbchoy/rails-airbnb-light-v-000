@@ -9,30 +9,30 @@
 
 DATA = {
   :user_keys =>
-    ["name", "budget", "guests", "password"],
+    ["name", "budget", "guests", "pets", "password"],
   :users => [
-    ["Max Charles", 100, 3, "password"],
-    ["Skai Jackson", 500, 6, "password"],
-    ["Kaleo Elam", 350, 2, "password"],
-    ["Megan Charpentier", 400, 4, "password"],
-    ["Hayden Byerly", 800, 4, "password"],
-    ["Tenzing Norgay Trainor", 1000, 5, "password"],
-    ["Davis Cleveland", 600, 3, "password"],
-    ["Cole Sand", 700, 4, "password"],
-    ["Quvenzhané Wallis", 500, 3, "password"]
+    ["Max Charles", 100, 3, true, "password"],
+    ["Skai Jackson", 500, 6, true, "password"],
+    ["Kaleo Elam", 350, 2, false,"password"],
+    ["Megan Charpentier", 400, 4, false, "password"],
+    ["Hayden Byerly", 800, 4, true, "password"],
+    ["Tenzing Norgay Trainor", 1000, 5, true, "password"],
+    ["Davis Cleveland", 600, 3, true, "password"],
+    ["Cole Sand", 700, 4, false, "password"],
+    ["Quvenzhané Wallis", 500, 3, false, "password"]
   ],
   :house_keys =>
-   ["name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count"],
+   ["name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed"],
   :houses => [
-    ["Studio Guest House Hot Tub Wifi", 93, "South Lake Tahoe", 2, 4, 4, 4, 379],
-    ["Amazing A-frame cabin with hot tub, 2 fireplaces & more", 154, "Tahoe City", 8, 5, 4, 4, 50],
-    ["Rustic Chic Cabin Walk 2 Lake Woodstove Fireplace", 86, "South Lake Tahoe", 6, 5, 3, 4, 86],
-    ["Pine Cone the Awesome (Sunnyside)", 131, "Tahoe City", 16, 5, 5, 4, 192],
-    ["Classic, Lake Tahoe cabin on double lot w/ WiFi & fireplace!", 126, "Carnelian Bay", 11, 5, 5, 4, 41],
-    ["Awesome Lakeview Hot TUB-Birds Eye Lookout-SAUNA", 250, "Tahoe City", 10, 5, 5, 5, 161],
-    ["Steps to Heavenly and Stateline", 112, "South Lake Tahoe", 6, 5, 4, 5, 166],
-    ["Cozy Condo In the Heart of Incline", 56, "Incline Village", 10, 5, 4, 5, 120],
-    ["Heavenly Cabin", 175, "South Lake Tahoe", 6, 5, 5, 4, 33]
+    ["Studio Guest House Hot Tub Wifi", 93, "South Lake Tahoe", 2, 4, 4, 4, 379, true],
+    ["Amazing A-frame cabin with hot tub, 2 fireplaces & more", 154, "Tahoe City", 8, 5, 4, 4, 50, true],
+    ["Rustic Chic Cabin Walk 2 Lake Woodstove Fireplace", 86, "South Lake Tahoe", 6, 5, 3, 4, 86, false],
+    ["Pine Cone the Awesome (Sunnyside)", 131, "Tahoe City", 16, 5, 5, 4, 192, false],
+    ["Classic, Lake Tahoe cabin on double lot w/ WiFi & fireplace!", 126, "Carnelian Bay", 11, 5, 5, 4, 41, false],
+    ["Awesome Lakeview Hot TUB-Birds Eye Lookout-SAUNA", 250, "Tahoe City", 10, 5, 5, 5, 161, true],
+    ["Steps to Heavenly and Stateline", 112, "South Lake Tahoe", 6, 5, 4, 5, 166, true],
+    ["Cozy Condo In the Heart of Incline", 56, "Incline Village", 10, 5, 4, 5, 120, false],
+    ["Heavenly Cabin", 175, "South Lake Tahoe", 6, 5, 5, 4, 33, false]
   ],
   :owners => [
     "Mary Elitch Long",

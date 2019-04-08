@@ -4,11 +4,7 @@
   <label>Name:</label><br>
   <%= text_field_tag :'user[name]' %><br>
 
-  <label>What is your account balance(US$)?</label><br>
-  <%= text_field_tag :'user[budget]' %><br>
-
-  <label>How many guests are there in your party?</label><br>
-  <%= text_field_tag :'user[guests]' %><br>
+  <%= render 'user'%>
 
   <label>Check box if you are an owner</label>
   <%= check_box_tag :'user[owner]' %><br>

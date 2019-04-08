@@ -7813,3 +7813,657 @@ Processing by HousesController#index as HTML
 Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/houses/1" for 127.0.0.1 at 2019-04-07 18:16:46 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.7ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (10.9ms)
+Started GET "/houses/1" for 127.0.0.1 at 2019-04-07 18:16:48 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2199ms (Views: 2184.6ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 291ms (Views: 287.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/stays" for 127.0.0.1 at 2019-04-07 18:16:53 -0700
+Processing by StaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R6pttd4hiba2pBoUCTAfUgd0EbUH6U8RuOHYerD+F+x5+nQxzFIhZDFp2FAbLJNllXEqp09lhjRTrCOBpugCHw==", "guest_id"=>"23", "house_id"=>"1", "days"=>"4", "commit"=>"Book This House"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.1ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStay Create (72.1ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "23"], ["house_id", "1"]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/23?message=Sorry+you+have+exceeded+the+maximum+number+of+guests+allowed+in+Studio+Guest+House+Hot+Tub+Wifi.%0A%0A++++++Please+choose+another+house.
+Completed 302 Found in 105ms (ActiveRecord: 95.9ms)
+
+
+Started GET "/users/23?message=Sorry+you+have+exceeded+the+maximum+number+of+guests+allowed+in+Studio+Guest+House+Hot+Tub+Wifi.%0A%0A++++++Please+choose+another+house." for 127.0.0.1 at 2019-04-07 18:16:53 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"message"=>"Sorry you have exceeded the maximum number of guests allowed in Studio Guest House Hot Tub Wifi.\n\n      Please choose another house.", "id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-07 18:17:00 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (0.6ms)
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-07 18:17:04 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-07 18:17:04 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 65ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-07 18:17:06 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-07 23:13:22 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 326ms (Views: 312.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-07 23:14:02 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-07 23:16:08 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_user.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-07 23:16:20 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-07 23:16:34 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-07 23:19:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 100ms (Views: 61.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-07 23:20:04 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V3Z3yTJyk3ATw6zBe24MUehcPSHcvQVQGmPD+VD20plUppCRspdoTbvYOQzbDFUv9JnXJUkipDt7epuyAjc8Rg==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/23
+Completed 302 Found in 86ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/23" for 127.0.0.1 at 2019-04-07 23:20:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (80.5ms)
+  Rendered users/show.html.erb within layouts/application (82.8ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `pet' for #<User:0x00007fce80cdd678>):
+    2: <p>Name: <%= user.name %></p>
+    3: <p>Account Balance: $<%= user.budget %></p>
+    4: <p>Guests in the party: <%= user.guests %></p>
+    5: <p>Pets: <%= "Yes" if user.pet %><%= "No" if !user.pet %></p>
+  
+app/views/users/_form.html.erb:5:in `_app_views_users__form_html_erb__112013502439639377_70262450512320'
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___1531962115288746085_70262450479720'
+Started GET "/" for 127.0.0.1 at 2019-04-07 23:21:46 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 251ms (Views: 219.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/23" for 127.0.0.1 at 2019-04-07 23:21:49 -0700
+  
+SyntaxError (/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/controllers/users_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+        owner: params[:user][:owner])
+        ^~~~~
+/Users/barbchoy/Development/Flatiron/rails-airbnb-light-v-000/app/controllers/users_controller.rb:12: syntax error, unexpected ')', expecting end
+...  owner: params[:user][:owner])
+...                              ^):
+  
+app/controllers/users_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/users_controller.rb:12: syntax error, unexpected ')', expecting end
+Started GET "/users" for 127.0.0.1 at 2019-04-07 23:22:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-04-07 23:22:22 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/23" for 127.0.0.1 at 2019-04-07 23:22:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (8.8ms)
+  Rendered users/show.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `pet' for #<User:0x00007fce80c39c30>):
+    2: <p>Name: <%= user.name %></p>
+    3: <p>Account Balance: $<%= user.budget %></p>
+    4: <p>Guests in the party: <%= user.guests %></p>
+    5: <p>Pets: <%= "Yes" if user.pet %><%= "No" if !user.pet %></p>
+  
+app/views/users/_form.html.erb:5:in `_app_views_users__form_html_erb__112013502439639377_70262450197700'
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___1531962115288746085_70262450144680'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "budget" integer, "guests" integer, "pets" boolean DEFAULT 'f', "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer, "pets_allowed" boolean, "owner_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_houses_on_owner_id" ON "houses" ("owner_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "guest_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (20.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-08 06:28:07.693412"], ["updated_at", "2019-04-08 06:28:07.693412"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$R/pqQdZfK6W8Luy/.007zuxXEx1KAg1.lQmRfwx8Au4yOJ1AdEW9W"], ["budget", 100], ["guests", 3], ["pets", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$D3FdJaIRMdvNUOjpGvH56O.eh9rUGZ6P2WY50I/Yvi7d9o/W936HC"], ["budget", 500], ["guests", 6], ["pets", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$HMjcCfTvh1ZMP1BxMvcQju4tF1JqECp7GX0FWTb.ET1HomKGIxMT."], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$HAAuCUK5yo6IUmlIGsUIJuRyOVRFiYP6MOPN2oQbIR7DyBXLmiRem"], ["budget", 400], ["guests", 4]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$agWUTRxhI0vdOjg3ni8BgeFWRDNySGHRU8SnQtMgklVA3Y4fbANLe"], ["budget", 800], ["guests", 4], ["pets", "t"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$0r.UhQDwt.IshQXl89gGyujB8FOuoN0eDUR/GF//uOS2AcEP84Pnu"], ["budget", 1000], ["guests", 5], ["pets", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$qsWvhmWIWn38RqAPXYkeveMayCW/CJ3TG0TBohJbV4xmaVg276Ed6"], ["budget", 600], ["guests", 3], ["pets", "t"]]
+  [1m[35m (27.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$7o3UKXD1wudtJ0RJkcz7BulP1bD614yoleM.Ijj3KWfMSHSPUBZDS"], ["budget", 700], ["guests", 4]]
+  [1m[35m (19.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$41/HqmwM.wV.TnKZiG5.ee5HlIPyrsT9ubBZ9qEbZLDwur36ahgIS"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$RKFVrBbTObdE4jZ56Q.DEuLlmeBbnRm6uTY0pO8PmFBqHoO9T9ol."], ["owner", "t"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$Sd9NNUa.MLBwiUfpoAN4Ves3WNuknOltL9qX6D6Crqmj06Bk7PxPC"], ["owner", "t"]]
+  [1m[35m (27.8ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$bAJ1OxoWVYKeGudu.JgUcO7XCSa13fZE.kq5HceiKF2/MccZdwUMC"], ["budget", 100], ["guests", 3], ["pets", "t"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$kl0MBADM.oqbK7RsfVTekO5QhgjXebA.zLDQFYWcee44HGdbT2fNq"], ["budget", 500], ["guests", 6], ["pets", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$uYO9mxNpUlJR0cK17Te1KuioonYwUIvbLUU2TNai3YoyPn9nzojO6"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$xQceQlBtY2V/f/G5f7YBpOrptC.8FPvVs45eaSXqfBFQu7LjHcr5C"], ["budget", 400], ["guests", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$g1SAD5gPvk0dUka2O2/s3uhPOJBis1VA2m92MmyvPARwOD3rJN2B."], ["budget", 800], ["guests", 4], ["pets", "t"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$7kBHB95DY8shpVJmsXIXq.y6F6JJwv6g4PkoiWUV4F.X4bLBVU3AW"], ["budget", 1000], ["guests", 5], ["pets", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$66Ooi/KSTM1P2yOlDKUvw.NT0Hc9uzb7.byoc6w3GTAj9Ja/JjLYq"], ["budget", 600], ["guests", 3], ["pets", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$8.baCN1DvlJ9EQ5B0Og4wOx07JLdbRnmZ3R3.cHdC3l7gTRzkZS4a"], ["budget", 700], ["guests", 4]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$GfpUH.tdlG2DOwHXXGr3bOLKXbyY8XQe9XPjYXXUOLO2h6MW0K2RK"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$d6DUu.L2jY5zEGGxMXYeD.b.lANnUhVGVd6.CRlR8jgk3jMkw9lBu"], ["owner", "t"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$W/W5oRpEx2i14CcjcH5DdupgsUBJQbOXL48u8kpaUaMFfW.8g.3SG"], ["owner", "t"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$xanIsbiuZ2uvnRXCPO1vrOHMsZvGwAHKXPHB1L8YjIbq8/4huZjz6"], ["budget", 100], ["guests", 3], ["pets", "t"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$Q/gzHTecQUyZ0XQK5861YuGqBlkvJdQfyxShueb8pqzDYgADq.fHm"], ["budget", 500], ["guests", 6], ["pets", "t"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$TKAWS95OxicD4hwctvuUEeLno0Is5fhBia9m8xWKQpNlqIvhwgsQa"], ["budget", 350], ["guests", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$dSndqSMYfg4yrprlNKOK4elhixEVMW5moUYQpJozyHUebjClrVQoO"], ["budget", 400], ["guests", 4]]
+  [1m[35m (59.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$Qh6f/6z6U.NMjeFeLOrdnuJj0C3LDB7.S2AfxTPaJVEqeQIpz3VjG"], ["budget", 800], ["guests", 4], ["pets", "t"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$6cEMAMtH7ztYgEjPBD8.JeaP1uf5/s3EwevhkGlS3eLpbEQCMS6pu"], ["budget", 1000], ["guests", 5], ["pets", "t"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$19DpWRSCeCxnFibYhqaX/OIZDI1V5UX76EIIM7Y6axXIQXdEqbhWy"], ["budget", 600], ["guests", 3], ["pets", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$Lb014dJQkkox9H1EKTfOAeXSUXUVq1kMbourW2xtyXdmCcTnujOdG"], ["budget", 700], ["guests", 4]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (11.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "budget", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$QaGa8kitVZ./e9skAS6Y0Oa6vatuzZeg9eGJDH/wy.8XDyQ2H3LOC"], ["budget", 500], ["guests", 3]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$A8IclcZrZlQcyqLWT.r.YObvlmlAo3CWTY16AneRpyaNl3wjnN1Fa"], ["owner", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$/15zs.2Lr8Xum9S9NXE3RON9ZFJbkAamNAj9DgDCHQ//dZRzHmnkW"], ["owner", "t"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Studio Guest House Hot Tub Wifi"], ["price_per_night", 93], ["city", "South Lake Tahoe"], ["max_guests", 2], ["cleanliness_rating", 4], ["location_rating", 4], ["value_rating", 4], ["reviews_count", 379], ["pets_allowed", "t"], ["owner_id", 11]]
+  [1m[36mStay Create (0.4ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "18"], ["house_id", "1"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Amazing A-frame cabin with hot tub, 2 fireplaces & more"], ["price_per_night", 154], ["city", "Tahoe City"], ["max_guests", 8], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 4], ["reviews_count", 50], ["pets_allowed", "t"], ["owner_id", 33]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "30"], ["house_id", "2"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rustic Chic Cabin Walk 2 Lake Woodstove Fireplace"], ["price_per_night", 86], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 3], ["value_rating", 4], ["reviews_count", 86], ["pets_allowed", "f"], ["owner_id", 33]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "31"], ["house_id", "3"]]
+  [1m[35m (21.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (9.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pine Cone the Awesome (Sunnyside)"], ["price_per_night", 131], ["city", "Tahoe City"], ["max_guests", 16], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 192], ["pets_allowed", "f"], ["owner_id", 22]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "16"], ["house_id", "4"]]
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (16.3ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Classic, Lake Tahoe cabin on double lot w/ WiFi & fireplace!"], ["price_per_night", 126], ["city", "Carnelian Bay"], ["max_guests", 11], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 41], ["pets_allowed", "f"], ["owner_id", 21]]
+  [1m[36mStay Create (1.5ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "25"], ["house_id", "5"]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (27.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (17.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Awesome Lakeview Hot TUB-Birds Eye Lookout-SAUNA"], ["price_per_night", 250], ["city", "Tahoe City"], ["max_guests", 10], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 5], ["reviews_count", 161], ["pets_allowed", "t"], ["owner_id", 21]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "8"], ["house_id", "6"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (14.1ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Steps to Heavenly and Stateline"], ["price_per_night", 112], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 5], ["reviews_count", 166], ["pets_allowed", "t"], ["owner_id", 33]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "16"], ["house_id", "7"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (1.2ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cozy Condo In the Heart of Incline"], ["price_per_night", 56], ["city", "Incline Village"], ["max_guests", 10], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 5], ["reviews_count", 120], ["pets_allowed", "f"], ["owner_id", 21]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "27"], ["house_id", "8"]]
+  [1m[35m (27.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Heavenly Cabin"], ["price_per_night", 175], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 33], ["pets_allowed", "f"], ["owner_id", 11]]
+  [1m[36mStay Create (1.8ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "2"], ["house_id", "9"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2019-04-07 23:30:20 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 178ms (Views: 173.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/23" for 127.0.0.1 at 2019-04-07 23:30:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 90ms (Views: 82.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-07 23:30:31 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.0ms)
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 128ms (Views: 116.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-07 23:31:33 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (0.7ms)
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/houses/7" for 127.0.0.1 at 2019-04-07 23:31:41 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHouse Load (1.4ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 95ms (Views: 74.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/houses/7" for 127.0.0.1 at 2019-04-07 23:35:33 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/_house.html.erb (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses/7" for 127.0.0.1 at 2019-04-07 23:36:59 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/stays" for 127.0.0.1 at 2019-04-07 23:38:52 -0700
+Processing by StaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9uPgfU1MjG0Rdk03UEpGsHvzeYuPFgC2KNei/zuorguxop9xzev4Dlz19+fhM/YOqCDnsMuwHdX8kIj7hizWGA==", "guest_id"=>"23", "house_id"=>"7", "days"=>"2", "commit"=>"Book This House"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStay Create (0.6ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "23"], ["house_id", "7"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/23?message=Sorry+you+do+not+have+enough+account+balance+to+stay+2+days+in+Steps+to+Heavenly+and+Stateline.%0A%0A++++++Please+choose+another+house+or+edit+your+profile.
+Completed 302 Found in 70ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/users/23?message=Sorry+you+do+not+have+enough+account+balance+to+stay+2+days+in+Steps+to+Heavenly+and+Stateline.%0A%0A++++++Please+choose+another+house+or+edit+your+profile." for 127.0.0.1 at 2019-04-07 23:38:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"message"=>"Sorry you do not have enough account balance to stay 2 days in Steps to Heavenly and Stateline.\n\n      Please choose another house or edit your profile.", "id"=>"23"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 102ms (Views: 96.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-07 23:38:56 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.5ms)
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/houses/3" for 127.0.0.1 at 2019-04-07 23:39:08 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/stays" for 127.0.0.1 at 2019-04-07 23:39:12 -0700
+Processing by StaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lu3O0ll9ulAC3VXhia1J1FPzDmJ71bj3GSVYOJVNg/MQvddWSw4SgoUQl6WbscXjwfY1cDNZcdLyaKPDg1uWAA==", "guest_id"=>"23", "house_id"=>"3", "days"=>"1", "commit"=>"Book This House"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.5ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStay Create (0.8ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "23"], ["house_id", "3"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/23?message=Sorry+no+pets+allowed+in+Rustic+Chic+Cabin+Walk+2+Lake+Woodstove+Fireplace.+Please+choose+another+house+or+edit+your+profile.
+Completed 302 Found in 13ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users/23?message=Sorry+no+pets+allowed+in+Rustic+Chic+Cabin+Walk+2+Lake+Woodstove+Fireplace.+Please+choose+another+house+or+edit+your+profile." for 127.0.0.1 at 2019-04-07 23:39:12 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"message"=>"Sorry no pets allowed in Rustic Chic Cabin Walk 2 Lake Woodstove Fireplace. Please choose another house or edit your profile.", "id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 104ms (Views: 91.8ms | ActiveRecord: 0.4ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
