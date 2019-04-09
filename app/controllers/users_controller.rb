@@ -6,12 +6,17 @@ class UsersController < ApplicationController
   def create
     @user = User.create(name: params[:user][:name],
         password: params[:user][:password],
-        balance: params[:user][:balance],
-        guests: params[:user][:guests],
-        pets: params[:user][:pets],
+        # balance: params[:user][:balance],
+        # guests: params[:user][:guests],
+        # pets: params[:user][:pets],
         owner: params[:user][:owner])
     log_in(@user)
-    redirect_to user_path(@user)
+
+    if !@user.owner
+      redirect_to edit_user_path(@user)
+    else
+      redirect_to user_path(@user)
+    end
   end
 
   def show

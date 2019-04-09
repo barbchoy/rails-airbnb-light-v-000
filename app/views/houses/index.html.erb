@@ -1,4 +1,6 @@
+<% if !current_user.owner %>
 <%=render partial: 'users/form', locals: {user: current_user} %>
+<% end %>
 <h1>Houses#index</h1>
 
 <p>Find me in app/views/houses/index.html.erb</p>

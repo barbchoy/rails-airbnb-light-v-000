@@ -4,13 +4,11 @@
   <label>Name:</label><br>
   <%= text_field_tag :'user[name]' %><br>
 
-  <%= render 'user'%>
-
+  <label>Password</label><br>
+  <%= password_field_tag :'user[password]' %><br>
   <label>Check box if you are an owner</label>
   <%= check_box_tag :'user[owner]' %><br>
-
-  <label>Password</label><br>
-  <%= password_field_tag :'user[password]' %><br><br>
+<br>
 
   <%= submit_tag "Create User" %>
 <% end %>

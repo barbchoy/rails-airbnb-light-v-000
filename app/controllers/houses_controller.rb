@@ -11,6 +11,7 @@ class HousesController < ApplicationController
   end
 
   def new
+    @house = House.new
   end
 
   def edit
