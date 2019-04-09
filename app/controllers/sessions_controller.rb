@@ -7,15 +7,9 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(:name => params[:user_name])
     if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id
+      log_in(@user)
       redirect_to user_path(@user)
-    elsif !@user && @user = User.find_or_create_by(:uid => auth['uid']) do |u|
-      u.name = auth['info']['name']
-      u.password = "password"
-      u.email = auth['info']['email']
-      u.image = auth['info']['image']
-      end
-      # session[:user_id] = @user.id
+    elsif !@user && @user = signin_by_facebook
       log_in(@user)
       redirect_to user_path(@user)
     else  flash[:message] = "Incorrect username and/or password."

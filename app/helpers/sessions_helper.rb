@@ -23,4 +23,13 @@ module SessionsHelper
     log_out
     redirect_to root_url
   end
+
+  def signin_by_facebook
+    @user = User.find_or_create_by(:uid => auth['uid']) do |u|
+    u.name = auth['info']['names']
+    u.password = "password"
+    u.email = auth['info']['email']
+    u.image = auth['info']['image']
+    end
+  end
 end
