@@ -30,5 +30,6 @@ Rails.application.routes.draw do
   post '/signin', to: "sessions#create"
   get '/logout', to: "sessions#destroy"
   post '/users/:id', to: "users#update"
+  get '/auth/facebook/callback' => 'sessions#create'
 
 end

@@ -6,10 +6,8 @@ class UsersController < ApplicationController
   def create
     @user = User.create(name: params[:user][:name],
         password: params[:user][:password],
-        # balance: params[:user][:balance],
-        # guests: params[:user][:guests],
-        # pets: params[:user][:pets],
         owner: params[:user][:owner])
+
     log_in(@user)
 
     if !@user.owner
@@ -45,7 +43,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:balance, :guests, :pets )
+    params.require(:user).permit(:email, :balance, :guests, :pets )
   end
 
 

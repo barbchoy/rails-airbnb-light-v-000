@@ -13853,3 +13853,2433 @@ Processing by WelcomeController#home as HTML
 Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 23:57:27 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Started GET "/signin" for 127.0.0.1 at 2019-04-08 23:57:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (44.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 2473ms (Views: 2426.2ms | ActiveRecord: 44.6ms)
+
+
+Completed 200 OK in 2761ms (Views: 2758.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-04-08 23:57:32 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 501ms (Views: 498.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-08 23:57:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 83ms (Views: 80.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-08 23:58:36 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-08 23:58:39 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-04-08 23:58:47 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-08 23:58:55 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qF3nuFKv0Xxz0LmFxDy+PCyIJF6bfLOGDdbK+VWasnXkw9QNVBp5qVNDrZv3p/lIDxcGwt4XLPjPE20vJ7rAvQ==", "user"=>{"name"=>"Barbara", "password"=>"[FILTERED]", "owner"=>"1"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (322.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Barbara"], ["password_digest", "$2a$10$RNfHdrBuIil4t2dhjKs.me0/GFqGz1uZs85xfhaY4DXedmq7ZteNG"], ["owner", "t"]]
+  [1m[35m (18.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/21
+Completed 302 Found in 908ms (ActiveRecord: 341.1ms)
+
+
+Started GET "/users/21" for 127.0.0.1 at 2019-04-08 23:58:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-08 23:58:59 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.5ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-08 23:59:04 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-08 23:59:04 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-08 23:59:05 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 00:02:12 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2648ms (Views: 2645.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 00:02:17 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 00:02:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGk7Rzwaoy+mWhh9UoVL8d0Q2xRZrgnOw3Yc1diXUXI3udwfvP9YEg5BjbDy5xKPwdUxEMwxqKWib0Seila/rQ==", "user_name"=>"Barbara", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/12
+Completed 302 Found in 81ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2019-04-09 00:02:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 00:05:10 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 00:05:10 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 00:05:11 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 00:05:11 -0700
+Processing by WelcomeController#home as HTML
+Completed 200 OK in 391ms (Views: 389.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 210ms (Views: 205.0ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 08:33:01 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (24.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 1532ms (Views: 1471.2ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 08:33:10 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 08:33:38 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 107ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 08:33:44 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:14:07 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 491ms (Views: 446.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:14:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 10:14:15 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 106ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:15:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 454ms (Views: 420.7ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
+Started GET "/" for 127.0.0.1 at 2019-04-09 10:33:56 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 313ms (Views: 287.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:33:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 10:34:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-04-09 10:35:07 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 106ms (Views: 103.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:35:09 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:35:30 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:35:43 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 10:35:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-04-09 10:50:11 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1384ms (Views: 1356.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 10:50:15 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 10:50:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:09:06 -0700
+  [1m[35m (92.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5140ms (Views: 5092.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:09:13 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 145ms (Views: 144.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:09:18 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (154.0ms)
+Completed 200 OK in 219ms (Views: 215.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:09:20 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:09:21 -0700
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:14:30 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 101ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:14:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:14:36 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:14:36 -0700
+Started GET "/auth/facebook/callback?error_code=1349168&error_message=URL+Blocked%3A+This+redirect+failed+because+the+redirect+URI+is+not+whitelisted+in+the+app%E2%80%99s+Client+OAuth+Settings.+Make+sure+Client+and+Web+OAuth+Login+are+on+and+add+all+your+app+domains+as+Valid+OAuth+Redirect+URIs." for 127.0.0.1 at 2019-04-09 11:14:45 -0700
+  
+OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)):
+  
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:147:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.9.0) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.0) lib/omniauth/builder.rb:64:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `load'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `<main>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `eval'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:15:48 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 446ms (Views: 423.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:15:55 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:15:56 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:15:57 -0700
+Started GET "/auth/facebook/callback?code=AQAeN4HhNM8ycRV9nGhcMhYoah5A6O_03lH-Aj3d-h6TB8x9ouW6bR0d0VC6BbwxImPj_AJ7Ry_EDUllRCLA0u1FYuVXPCACxkyxYGk24OyXM-qLjcOMgIWAsfidgKwbjKjQD8lFLummU-pZt4DSFBkAXjd6l9klQFSSyh75-zf5ximDSvrGS8BBYt-c_3P8WKgv2_AlM7MPNz5BFsf6HXP29GzPtz8Lc8-OG7sdp8R64worxPe1xRx7v-yTftLOPWGghSzgo1QQtZV9stBtBOiG0yS87mQ7xuzV5KjNixUgdLJGSPovPSqYYCv7HlJEUzo&state=92c7d9d86da24aa6987868da76d4994c02fa147c1d4cde2c" for 127.0.0.1 at 2019-04-09 11:16:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAeN4HhNM8ycRV9nGhcMhYoah5A6O_03lH-Aj3d-h6TB8x9ouW6bR0d0VC6BbwxImPj_AJ7Ry_EDUllRCLA0u1FYuVXPCACxkyxYGk24OyXM-qLjcOMgIWAsfidgKwbjKjQD8lFLummU-pZt4DSFBkAXjd6l9klQFSSyh75-zf5ximDSvrGS8BBYt-c_3P8WKgv2_AlM7MPNz5BFsf6HXP29GzPtz8Lc8-OG7sdp8R64worxPe1xRx7v-yTftLOPWGghSzgo1QQtZV9stBtBOiG0yS87mQ7xuzV5KjNixUgdLJGSPovPSqYYCv7HlJEUzo", "state"=>"92c7d9d86da24aa6987868da76d4994c02fa147c1d4cde2c"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?):
+  
+app/controllers/sessions_controller.rb:13:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:17:28 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 99ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:17:30 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 86ms (Views: 82.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:17:32 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:17:32 -0700
+Started GET "/auth/facebook/callback?code=AQDhzHbYuKeiWYxUPiYDf3Avf8Gq88KjdyjfCauCZYC748QOMMYzfxKdp-7yjanFcKVMZ53GRRycYQO46H2satmFqGYmBm3VPAPN-OobLBCPU0BufSziUkkhhMWRd1E2LT3wCGJlzaqhlD0OasZtDQAomtUx9Dv12dwXNUgce2XtKwkaU4JKDFDjVT6qzN0z3RvlYuwM_vjhF6-jRVC5QiEPo_hEuuT1vYmAq1A4TVIxHG9Ch-L5SzZlvkn5oZsMu614CIfCiRnJev1BfXgaNkNxnzYOMkbefbHorRUzExZwfw_q-yF_LplSZIQqrYpsqcQ&state=90370f362ef88d6d1509151b2a905548a5fb1d057265489c" for 127.0.0.1 at 2019-04-09 11:17:33 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDhzHbYuKeiWYxUPiYDf3Avf8Gq88KjdyjfCauCZYC748QOMMYzfxKdp-7yjanFcKVMZ53GRRycYQO46H2satmFqGYmBm3VPAPN-OobLBCPU0BufSziUkkhhMWRd1E2LT3wCGJlzaqhlD0OasZtDQAomtUx9Dv12dwXNUgce2XtKwkaU4JKDFDjVT6qzN0z3RvlYuwM_vjhF6-jRVC5QiEPo_hEuuT1vYmAq1A4TVIxHG9Ch-L5SzZlvkn5oZsMu614CIfCiRnJev1BfXgaNkNxnzYOMkbefbHorRUzExZwfw_q-yF_LplSZIQqrYpsqcQ", "state"=>"90370f362ef88d6d1509151b2a905548a5fb1d057265489c"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:20:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:18:11 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:18:12 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:18:14 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:18:14 -0700
+Started GET "/auth/facebook/callback?code=AQDfLEEIdV7fVByFBWF__m7C2w0lYaJSW92taRcM77Lf0XCdBcJDU9TVSaF14g3NVHdA4ee0K9_dCQwWxe9GTUsCJQx_tSQ-EKkQ2NXH7fUTLMkSC8vM8QxfwkvHZse8L13uV6igTk0KzRn57J-sl_T1_Bcq62IQcU4DLUFlUSpt2sHBsKv-Mbh-BUfTqJoKsml9U4SLMvHtSWZLm5d-1rlJ2ebFnZ0eILOIKCAzaX6eYQ-rHldFhZjK7wCspX1NMYvW8vfPtJFSUMQxgo28fxgb0hZIWwUWIL4KUusfDreVPXqB44q0e_xymLMWdtkuB2w&state=dab7e81abf5b7aa21eb7a02f497edb5b779f5e6c19088ad4" for 127.0.0.1 at 2019-04-09 11:18:14 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDfLEEIdV7fVByFBWF__m7C2w0lYaJSW92taRcM77Lf0XCdBcJDU9TVSaF14g3NVHdA4ee0K9_dCQwWxe9GTUsCJQx_tSQ-EKkQ2NXH7fUTLMkSC8vM8QxfwkvHZse8L13uV6igTk0KzRn57J-sl_T1_Bcq62IQcU4DLUFlUSpt2sHBsKv-Mbh-BUfTqJoKsml9U4SLMvHtSWZLm5d-1rlJ2ebFnZ0eILOIKCAzaX6eYQ-rHldFhZjK7wCspX1NMYvW8vfPtJFSUMQxgo28fxgb0hZIWwUWIL4KUusfDreVPXqB44q0e_xymLMWdtkuB2w", "state"=>"dab7e81abf5b7aa21eb7a02f497edb5b779f5e6c19088ad4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 499ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `bindng' for #<SessionsController:0x00007fe6f7439f78>
+Did you mean?  binding):
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:19:26 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 89ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:19:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 96ms (Views: 94.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:19:29 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:19:29 -0700
+Started GET "/auth/facebook/callback?code=AQAXV1yZAqZRg9iLUuzAjkkZdDEwllDlVLIwOoujQnF7ski9Tewmr4bZrpfbIqM5BM0CvOy5KJABv56yIY0orklWbIIH7Z_Yu_ggdAqfImD20rmrs_xWyB3TPaSh2ci1UJmroFUdDMzHt3e0jKbJAdEZtNILJg5gMxJsgKVtZ1Adp1lYKWUQ2-VwYXOKQTeo0fjZU2HM9UWRaJm8uQujbIArL_q2jxhawV_m58nBizL7qIVbb5vVqfB6Vuh87FDsKd60B0VBqXzyKdTCugBAcLtsNrGDAsMREM0_TXaZt0_U2AxP2RC2snHjda7jH-TRGA4&state=d9236c5743c545b55524f4d73b217916d5e2ecf9277dade3" for 127.0.0.1 at 2019-04-09 11:19:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAXV1yZAqZRg9iLUuzAjkkZdDEwllDlVLIwOoujQnF7ski9Tewmr4bZrpfbIqM5BM0CvOy5KJABv56yIY0orklWbIIH7Z_Yu_ggdAqfImD20rmrs_xWyB3TPaSh2ci1UJmroFUdDMzHt3e0jKbJAdEZtNILJg5gMxJsgKVtZ1Adp1lYKWUQ2-VwYXOKQTeo0fjZU2HM9UWRaJm8uQujbIArL_q2jxhawV_m58nBizL7qIVbb5vVqfB6Vuh87FDsKd60B0VBqXzyKdTCugBAcLtsNrGDAsMREM0_TXaZt0_U2AxP2RC2snHjda7jH-TRGA4", "state"=>"d9236c5743c545b55524f4d73b217916d5e2ecf9277dade3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 851ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `bindng' for #<SessionsController:0x00007fe6f566a358>
+Did you mean?  binding):
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:20:03 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:20:05 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 89ms (Views: 84.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:20:07 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:20:07 -0700
+Started GET "/auth/facebook/callback?code=AQCK_BOA1l-LRRBrINb3xo8Uw0L8dMhp1ZA58-cMR8wZ-Yr0lCwP8xZgr9JzH-FzpY9KKTpFLKvY8ycmlbqlUXvBIbP8LYcpnzD7O35inj9585mPf6acXK6dHwGewZEzlKijnLregU_grRIjfQLWSt_YAZDIt4Gy71XnAM2FZ51NqdFoGBCswKLR1MXfgw6Dlt-wWccgalH9C3BSJoxIOWFH8ySr2--3_ES5zlIoTEIVjGydZ2Mj-77faMwV0uj4ExpZBTAq1IIQcJUQ2ELJmH2FzBMYOiv_haiNRnuxz8MgpJZAlZyt1cF7AtxR1WWAclA&state=a30f43656b71b7a7e0ebce2ccc2a5f0d74b5eb181ddd0bea" for 127.0.0.1 at 2019-04-09 11:20:08 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCK_BOA1l-LRRBrINb3xo8Uw0L8dMhp1ZA58-cMR8wZ-Yr0lCwP8xZgr9JzH-FzpY9KKTpFLKvY8ycmlbqlUXvBIbP8LYcpnzD7O35inj9585mPf6acXK6dHwGewZEzlKijnLregU_grRIjfQLWSt_YAZDIt4Gy71XnAM2FZ51NqdFoGBCswKLR1MXfgw6Dlt-wWccgalH9C3BSJoxIOWFH8ySr2--3_ES5zlIoTEIVjGydZ2Mj-77faMwV0uj4ExpZBTAq1IIQcJUQ2ELJmH2FzBMYOiv_haiNRnuxz8MgpJZAlZyt1cF7AtxR1WWAclA", "state"=>"a30f43656b71b7a7e0ebce2ccc2a5f0d74b5eb181ddd0bea"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `bindng' for #<SessionsController:0x00007fe6f73b97d8>
+Did you mean?  binding):
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:20:29 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:20:30 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 144ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:20:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 83ms (Views: 79.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:20:33 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:20:33 -0700
+Started GET "/auth/facebook/callback?code=AQA7kjmyaybZNOhPl2QKUrKWFav-GqG84VrWrKJWGbySs2hXb975TjJitRgv7SstfHC6jegRPZBjDcz_H0zo-ZIznUdgr-mKdoEEW8Oc6nRYiFGmy1OH9pTrqNzj9OdokqsAnHC5TLMy68d-uxuh5ZTDJFYTTNybJqBBLnYDHy9dO5o7FLJmN2U4vv4MyXAPwU57blSVALJGusf68NexQqVrnMfW6B6JwQYAbIuixdN3X3vPR8PbAltFlyKYqfhz-KCkbwXdKSOROKO9u9Ay_TLrPBcgxZ04Ifh1xilDLHY-GsGdpxZ1fE-3ItP6dDiJATQ&state=87dc7288f461e9215efbd61a9a63fc39eb8586c7b4572a36" for 127.0.0.1 at 2019-04-09 11:20:33 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA7kjmyaybZNOhPl2QKUrKWFav-GqG84VrWrKJWGbySs2hXb975TjJitRgv7SstfHC6jegRPZBjDcz_H0zo-ZIznUdgr-mKdoEEW8Oc6nRYiFGmy1OH9pTrqNzj9OdokqsAnHC5TLMy68d-uxuh5ZTDJFYTTNybJqBBLnYDHy9dO5o7FLJmN2U4vv4MyXAPwU57blSVALJGusf68NexQqVrnMfW6B6JwQYAbIuixdN3X3vPR8PbAltFlyKYqfhz-KCkbwXdKSOROKO9u9Ay_TLrPBcgxZ04Ifh1xilDLHY-GsGdpxZ1fE-3ItP6dDiJATQ", "state"=>"87dc7288f461e9215efbd61a9a63fc39eb8586c7b4572a36"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:22:42 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 676ms (Views: 653.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:22:46 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 122ms (Views: 118.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:22:47 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:22:47 -0700
+Started GET "/auth/facebook/callback?code=AQCuVH0kFSnnSQPDA1bOFTKuCosZOfj-4kiXS0dWS67tcFKqnGVglw7MyWWbP22uJ_8KQplH2VtQsViSB_48RHOMoGqWXPEqFuFbgpVwYmjS8oPrLOZbyWLuYrcBgiNdSMiJPKDTph5zDm4XspRA1SgUpb0Y6AD49ZKDFm0GrwRGS8xKtwz3yQGWgoFp1acGuyDgE__UWzinnkxjBg00kLbjoTsqhKGUAkZm2uGO82PvcBAuc8LAoeYww07STzlQ_uBjtrhR-UTY3RU8PQJqjOTFKDA4x03rmDkX7PvjMfBkwma8b4puzyWm8Tmdiqyz3YI&state=3b39995f8f3b906f8218268ba507d379e969333c461c97ba" for 127.0.0.1 at 2019-04-09 11:22:48 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCuVH0kFSnnSQPDA1bOFTKuCosZOfj-4kiXS0dWS67tcFKqnGVglw7MyWWbP22uJ_8KQplH2VtQsViSB_48RHOMoGqWXPEqFuFbgpVwYmjS8oPrLOZbyWLuYrcBgiNdSMiJPKDTph5zDm4XspRA1SgUpb0Y6AD49ZKDFm0GrwRGS8xKtwz3yQGWgoFp1acGuyDgE__UWzinnkxjBg00kLbjoTsqhKGUAkZm2uGO82PvcBAuc8LAoeYww07STzlQ_uBjtrhR-UTY3RU8PQJqjOTFKDA4x03rmDkX7PvjMfBkwma8b4puzyWm8Tmdiqyz3YI", "state"=>"3b39995f8f3b906f8218268ba507d379e969333c461c97ba"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/facebook/callback?code=AQCuVH0kFSnnSQPDA1bOFTKuCosZOfj-4kiXS0dWS67tcFKqnGVglw7MyWWbP22uJ_8KQplH2VtQsViSB_48RHOMoGqWXPEqFuFbgpVwYmjS8oPrLOZbyWLuYrcBgiNdSMiJPKDTph5zDm4XspRA1SgUpb0Y6AD49ZKDFm0GrwRGS8xKtwz3yQGWgoFp1acGuyDgE__UWzinnkxjBg00kLbjoTsqhKGUAkZm2uGO82PvcBAuc8LAoeYww07STzlQ_uBjtrhR-UTY3RU8PQJqjOTFKDA4x03rmDkX7PvjMfBkwma8b4puzyWm8Tmdiqyz3YI&state=3b39995f8f3b906f8218268ba507d379e969333c461c97ba" for 127.0.0.1 at 2019-04-09 11:23:15 -0700
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BjEfatspOme"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"BjEfatspOme"}}):
+  
+oauth2 (1.4.1) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.1) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.1) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.6.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.6.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.9.0) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.0) lib/omniauth/builder.rb:64:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `load'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `<main>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `eval'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:23:21 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 248ms (Views: 245.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:23:21 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:23:24 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 138ms (Views: 133.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:23:25 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:23:25 -0700
+Started GET "/auth/facebook/callback?code=AQDx9oBH_r3UUUs6rPDkbnsgTckkE5Dn0DE6JoW9XbzE9ni3lMKBzwwfdDfz6HypPd5Gf47zfvOsRsmqFsAgkn4f5HKEuWngE72ubzhJGbSTz25fM_UvWJzVE44le98ZE12GoxCFxdR0zK_KJzhDb4-p5XyPtkCDknphdxiJFZcegfmefRmkUNAv5jSRcgVVbMYWHIGLO8y84Qps6MMA1nxq0DfhWLhImOL5vJ3bYsEPKbmcMyCyEGt32Niguuz-_8J1sNd7JHoS8z7lYsvHvNbtSQQmbNCzFBpUei_djkSIvQEQWPWhz7H3xtopNnv_BIE&state=c0b3aa56625aba60dbf1ba3f0b2dc60662b63a8b02f94355" for 127.0.0.1 at 2019-04-09 11:23:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDx9oBH_r3UUUs6rPDkbnsgTckkE5Dn0DE6JoW9XbzE9ni3lMKBzwwfdDfz6HypPd5Gf47zfvOsRsmqFsAgkn4f5HKEuWngE72ubzhJGbSTz25fM_UvWJzVE44le98ZE12GoxCFxdR0zK_KJzhDb4-p5XyPtkCDknphdxiJFZcegfmefRmkUNAv5jSRcgVVbMYWHIGLO8y84Qps6MMA1nxq0DfhWLhImOL5vJ3bYsEPKbmcMyCyEGt32Niguuz-_8J1sNd7JHoS8z7lYsvHvNbtSQQmbNCzFBpUei_djkSIvQEQWPWhz7H3xtopNnv_BIE", "state"=>"c0b3aa56625aba60dbf1ba3f0b2dc60662b63a8b02f94355"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 421899ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:19:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:30:42 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 381ms (Views: 345.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:30:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 138ms (Views: 133.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:30:46 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:30:46 -0700
+Started GET "/auth/facebook/callback?error_code=1349168&error_message=URL+Blocked%3A+This+redirect+failed+because+the+redirect+URI+is+not+whitelisted+in+the+app%E2%80%99s+Client+OAuth+Settings.+Make+sure+Client+and+Web+OAuth+Login+are+on+and+add+all+your+app+domains+as+Valid+OAuth+Redirect+URIs." for 127.0.0.1 at 2019-04-09 11:30:53 -0700
+  
+OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)):
+  
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:147:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.9.0) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.0) lib/omniauth/builder.rb:64:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `load'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `<main>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `eval'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:31:03 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:31:05 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 127ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:31:08 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:31:10 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:31:10 -0700
+Started GET "/auth/facebook/callback?code=AQBG4_qHkqfM3nIX6cNT0R7BOPLeCFqwN2hNRHEvu8htKJFB4E1CFy5s4eObl5h1QZHuZfoYbbSUEzqXROZkmjuZsLIwN7CD0d_BWXYdOfkzWOaCcydaYsbFcuol1pulKyzrUahiXBy9TMy9k4OUe0v9YMghRU8oaHwijQnX4cRv71aI5_tMmhHEGkhlhXEL7yrJj3KWMOKYkaqy-QkIIRUHPo8doOH4a5ibncNdzQWOWISFprFPCQx7zJ6p_M8BTAJY11Wo9RLnaVdoiycoAbW2QVI4BKP_2XafF9Uaqm427OgDqzs0Qg9pETEwibP8Whs&state=74b9f80bece7c32f67b84e77b742bcce890c87ffdc24b180" for 127.0.0.1 at 2019-04-09 11:31:10 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBG4_qHkqfM3nIX6cNT0R7BOPLeCFqwN2hNRHEvu8htKJFB4E1CFy5s4eObl5h1QZHuZfoYbbSUEzqXROZkmjuZsLIwN7CD0d_BWXYdOfkzWOaCcydaYsbFcuol1pulKyzrUahiXBy9TMy9k4OUe0v9YMghRU8oaHwijQnX4cRv71aI5_tMmhHEGkhlhXEL7yrJj3KWMOKYkaqy-QkIIRUHPo8doOH4a5ibncNdzQWOWISFprFPCQx7zJ6p_M8BTAJY11Wo9RLnaVdoiycoAbW2QVI4BKP_2XafF9Uaqm427OgDqzs0Qg9pETEwibP8Whs", "state"=>"74b9f80bece7c32f67b84e77b742bcce890c87ffdc24b180"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara Choy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "James"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "James"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 371687ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:20:in `create'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:42:10 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 717ms (Views: 710.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:42:11 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 150ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:42:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 179ms (Views: 174.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:42:15 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:42:16 -0700
+Started GET "/auth/facebook/callback?error_code=1349168&error_message=URL+Blocked%3A+This+redirect+failed+because+the+redirect+URI+is+not+whitelisted+in+the+app%E2%80%99s+Client+OAuth+Settings.+Make+sure+Client+and+Web+OAuth+Login+are+on+and+add+all+your+app+domains+as+Valid+OAuth+Redirect+URIs." for 127.0.0.1 at 2019-04-09 11:42:26 -0700
+  
+OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)):
+  
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:147:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.9.0) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.0) lib/omniauth/builder.rb:64:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `load'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23:in `<main>'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `eval'
+/Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:42:41 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:42:41 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 142ms (Views: 138.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:42:43 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:42:44 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:42:45 -0700
+Started GET "/auth/facebook/callback?code=AQCmLGOZU7gvK87Ah7QFQ0HDtllBGdHhCC_gXGEYobwymN9LIH8tZODyQkrEC7FgJKhOvjfgPJuktnS5vMoe1UEBCRIyXcQL7FPrER6nPJ1iFBLeCu-HCQPX5eEwXrN-pFFcvDyf2iONnclhCEFEpms3j13s_kzuazeZfbH36Ol5FPboO8TDWgo7fY2cGcEonYvnOdoFw2UtekPlDDAQ-gqNsCZrzp45oPMUMbqbcdbaWsvefKB9vHjlYl4JjM6O1KWV97y02uPqx1fORKX-G97NCJ90KqV4wd7TBxbuxv0uIEoNDr6nuiZcIhqOSctoStA&state=0a070b1bbdccec2c64a21cbf8952dd18de9179cb22707b83" for 127.0.0.1 at 2019-04-09 11:42:45 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCmLGOZU7gvK87Ah7QFQ0HDtllBGdHhCC_gXGEYobwymN9LIH8tZODyQkrEC7FgJKhOvjfgPJuktnS5vMoe1UEBCRIyXcQL7FPrER6nPJ1iFBLeCu-HCQPX5eEwXrN-pFFcvDyf2iONnclhCEFEpms3j13s_kzuazeZfbH36Ol5FPboO8TDWgo7fY2cGcEonYvnOdoFw2UtekPlDDAQ-gqNsCZrzp45oPMUMbqbcdbaWsvefKB9vHjlYl4JjM6O1KWV97y02uPqx1fORKX-G97NCJ90KqV4wd7TBxbuxv0uIEoNDr6nuiZcIhqOSctoStA", "state"=>"0a070b1bbdccec2c64a21cbf8952dd18de9179cb22707b83"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:45:21 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:45:22 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 139ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:45:23 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:45:25 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:45:25 -0700
+Started GET "/auth/facebook/callback?code=AQBrzh8HIpETeWfCyUah97ttQ7N78Sx1kfYNZDH6j2Gsv_tFRdt0DmKDLLc4aYOpLjY_NyC7xqPYKUlrCmd-LSQ-AtsSEoKZlg3DcJ3TJWD-UXjFqYTNc9gKDKf2LZR8GqAfg2uK-F8MoY52a80W4Sj07qnfd7GGwUIVsRGpVwk0-Xf6rjZXxGTAHZlchBXhkxX9Ts38RW2X-TqP-j9mE4ebcFHuZwLOcRuV8RDeLnctHCPivyhRGFlUPoWdeEjAognfBlCkx-3FCbu-QkseNgTkyEdmbyG05YZaZrNSImbsKw3RoJFN4Mg4QR06vafW8Zg&state=f0ee4fe3637bb9d22271712805b1439674845b7e2bcb8e5c" for 127.0.0.1 at 2019-04-09 11:45:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBrzh8HIpETeWfCyUah97ttQ7N78Sx1kfYNZDH6j2Gsv_tFRdt0DmKDLLc4aYOpLjY_NyC7xqPYKUlrCmd-LSQ-AtsSEoKZlg3DcJ3TJWD-UXjFqYTNc9gKDKf2LZR8GqAfg2uK-F8MoY52a80W4Sj07qnfd7GGwUIVsRGpVwk0-Xf6rjZXxGTAHZlchBXhkxX9Ts38RW2X-TqP-j9mE4ebcFHuZwLOcRuV8RDeLnctHCPivyhRGFlUPoWdeEjAognfBlCkx-3FCbu-QkseNgTkyEdmbyG05YZaZrNSImbsKw3RoJFN4Mg4QR06vafW8Zg", "state"=>"f0ee4fe3637bb9d22271712805b1439674845b7e2bcb8e5c"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:20:in `create'
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:47:09 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:47:10 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 89ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:47:12 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 92ms (Views: 87.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:47:13 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:47:13 -0700
+Started GET "/auth/facebook/callback?code=AQDXGuCveOgHGQzC6oj5PMVdWGqer5StdhVAnjeieNC86P9_CK3Fz8HHioqEegD0OyNqS_WykBigAOACN1TsNTMqyglp1vDPlpsV12Pxes4V2O_sPgKrDC670b1C_SrYTH-pETuqd4LuobZaZS5_2qQOQN61pIr8JNYCTz5FINf9_K_iaOdS_u0htDzH7jGurPqwa5X3JvpOXfVlR0hYZbD5PR5vuTBJfsk5QgDvIUJFE4RCUQeF3XDXj3KxWJOIEtnZTCzGHQPcKVhiNFM3aTOPwrv7SnFUpmdi-ZxF6dwMQEgVqHAmSA6QKk43L5SXc-I&state=5bebb19c6d6335dfbae732ad605745d623b9e216b97e8008" for 127.0.0.1 at 2019-04-09 11:47:13 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDXGuCveOgHGQzC6oj5PMVdWGqer5StdhVAnjeieNC86P9_CK3Fz8HHioqEegD0OyNqS_WykBigAOACN1TsNTMqyglp1vDPlpsV12Pxes4V2O_sPgKrDC670b1C_SrYTH-pETuqd4LuobZaZS5_2qQOQN61pIr8JNYCTz5FINf9_K_iaOdS_u0htDzH7jGurPqwa5X3JvpOXfVlR0hYZbD5PR5vuTBJfsk5QgDvIUJFE4RCUQeF3XDXj3KxWJOIEtnZTCzGHQPcKVhiNFM3aTOPwrv7SnFUpmdi-ZxF6dwMQEgVqHAmSA6QKk43L5SXc-I", "state"=>"5bebb19c6d6335dfbae732ad605745d623b9e216b97e8008"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest") VALUES (?, ?)[0m  [["name", "Barbara Choy"], ["password_digest", "$2a$10$4XoupO9KmNV/1AJjS3VnSejmEHrH3J6Ym2xsXIYXJrgTAfmM5sZcm"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/22
+Completed 302 Found in 85ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/22" for 127.0.0.1 at 2019-04-09 11:47:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 117ms (Views: 105.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 11:47:31 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:47:31 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:47:33 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 499ms (Views: 496.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-04-09 11:47:54 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 11:48:00 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 99ms (Views: 95.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:48:12 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 11:48:12 -0700
+Started GET "/auth/facebook/callback?code=AQCT1BPnACLmP4syStfIoF_h3t1Fcj3Ad4-Yc93afPfp-zX3OiT8onX6-fYHFN8WaI4ofDM4CysinMySt9lvA8NuBDdklYeX5NdZwwW35Iqhz4Uk5oeudEsUJX73hslXKJ-3boO3fag-x-fXsDn-a-v0a-dJqaZYQcqFknIn2nM8-06b8jPJlhc4IAeLK3qx2ivE_TqFyLcEb67nbTuJ8Wi9OYjXZkHZwiY3hlG_lh-uobCSauWHJBMof_K6HkrIN7AMcZqk__cKJVDnHcnabV3uwCFc1wSB_w3ncb-izxrbRrCFkbqq0o9JSpoOOowO83I&state=5c2624e8de07ef355faaeaf9fdd72d05ccae5c88d0cde9c0" for 127.0.0.1 at 2019-04-09 11:48:12 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCT1BPnACLmP4syStfIoF_h3t1Fcj3Ad4-Yc93afPfp-zX3OiT8onX6-fYHFN8WaI4ofDM4CysinMySt9lvA8NuBDdklYeX5NdZwwW35Iqhz4Uk5oeudEsUJX73hslXKJ-3boO3fag-x-fXsDn-a-v0a-dJqaZYQcqFknIn2nM8-06b8jPJlhc4IAeLK3qx2ivE_TqFyLcEb67nbTuJ8Wi9OYjXZkHZwiY3hlG_lh-uobCSauWHJBMof_K6HkrIN7AMcZqk__cKJVDnHcnabV3uwCFc1wSB_w3ncb-izxrbRrCFkbqq0o9JSpoOOowO83I", "state"=>"5c2624e8de07ef355faaeaf9fdd72d05ccae5c88d0cde9c0"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest") VALUES (?, ?)[0m  [["name", "Barbara Choy"], ["password_digest", "$2a$10$JsTdMlahxy9cSqVq9C3qROZHkdKEu7mBdysrCYnypL2eXubOXzhZm"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/23
+Completed 302 Found in 84ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/23" for 127.0.0.1 at 2019-04-09 11:48:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (91.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20190329171040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "email" varchar, "image" varchar, "uid" varchar, "balance" integer DEFAULT 0, "guests" integer DEFAULT 0, "pets" boolean DEFAULT 'f', "owner" boolean DEFAULT 'f')[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190329171040"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHouse (20190330061502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "houses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price_per_night" integer, "city" varchar, "max_guests" integer, "cleanliness_rating" integer, "location_rating" integer, "value_rating" integer, "reviews_count" integer DEFAULT 0, "pets_allowed" boolean, "owner_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_houses_on_owner_id" ON "houses" ("owner_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (201.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061502"]]
+  [1m[35m (21.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStay (20190330061729)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "stays" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "guest_id" varchar, "house_id" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190330061729"]]
+  [1m[35m (36.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-09 19:00:31.684133"], ["updated_at", "2019-04-09 19:00:31.684133"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from block in execute at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Max Charles"], ["password_digest", "$2a$10$S67MmXZS7tdt8uHOZKwtS.zTH3abqWptA5R40RFIVuyNz/fhIRKfa"], ["balance", 100], ["guests", 3], ["pets", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Skai Jackson"], ["password_digest", "$2a$10$uKN7pY8Skj6FUuzt/hfE9ua3VCWIB6fvcneSaKwmeetZR0nLKMx42"], ["balance", 500], ["guests", 6], ["pets", "t"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Kaleo Elam"], ["password_digest", "$2a$10$6DDaKu/l/j.m6a8QPezOZ.cj22VLQP6Avcseg/MLg2OVEkUWMwNZ."], ["balance", 350], ["guests", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Megan Charpentier"], ["password_digest", "$2a$10$1UhjPsvL/.iyrNw1cARnIuybRUCqfW3BVh/AWcLzk9P6gtsYBCJdO"], ["balance", 400], ["guests", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hayden Byerly"], ["password_digest", "$2a$10$t4dkzUHVE9gk9r.90LXG3O8B6S4SR.bn1NA4Oaxa5Jjr5i6bwW9di"], ["balance", 800], ["guests", 4], ["pets", "t"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tenzing Norgay Trainor"], ["password_digest", "$2a$10$XS8.HTPpP.hH692SxLfgqOOopWDvVbuiJ4YMEOgIFxNug2CXcZFdW"], ["balance", 1000], ["guests", 5], ["pets", "t"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests", "pets") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Davis Cleveland"], ["password_digest", "$2a$10$FpB4VqfrnHRAAwRXN5MoyugzqmM9JM/PuaUDPKKLx7Vw25y18hZem"], ["balance", 600], ["guests", 3], ["pets", "t"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (8.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Cole Sand"], ["password_digest", "$2a$10$o5X5fNLvSHKgEAkxTRLqOO02NIvRUVnaGQ7DG66SdzGuQPERU9.BC"], ["balance", 700], ["guests", 4]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "balance", "guests") VALUES (?, ?, ?, ?)[0m  [["name", "Quvenzhané Wallis"], ["password_digest", "$2a$10$FkRzofhzuoFdhrlTUCyW2Oaj0UWF6QyH1IOEdkjddlh5tnQRjwYM."], ["balance", 500], ["guests", 3]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (6.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary Elitch Long"], ["password_digest", "$2a$10$1IhA8ttIyQ6pml/m4BI1luZCIJkoO83QGRcv1pKaaGN09Civt7qoS"], ["owner", "t"]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "John Elitch"], ["password_digest", "$2a$10$gAP9sq8uDo8OmgaCI8Df5uGa2ptgB.LmDrDf40mg0lwAYi2R2c89K"], ["owner", "t"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.8ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Studio Guest House Hot Tub Wifi"], ["price_per_night", 93], ["city", "South Lake Tahoe"], ["max_guests", 2], ["cleanliness_rating", 4], ["location_rating", 4], ["value_rating", 4], ["reviews_count", 379], ["pets_allowed", "t"], ["owner_id", 10]]
+  [1m[36mStay Create (0.5ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "2"], ["house_id", "1"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Amazing A-frame cabin with hot tub, 2 fireplaces & more"], ["price_per_night", 154], ["city", "Tahoe City"], ["max_guests", 8], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 4], ["reviews_count", 50], ["pets_allowed", "t"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "2"], ["house_id", "2"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rustic Chic Cabin Walk 2 Lake Woodstove Fireplace"], ["price_per_night", 86], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 3], ["value_rating", 4], ["reviews_count", 86], ["pets_allowed", "f"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "7"], ["house_id", "3"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pine Cone the Awesome (Sunnyside)"], ["price_per_night", 131], ["city", "Tahoe City"], ["max_guests", 16], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 192], ["pets_allowed", "f"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "6"], ["house_id", "4"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.8ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Classic, Lake Tahoe cabin on double lot w/ WiFi & fireplace!"], ["price_per_night", 126], ["city", "Carnelian Bay"], ["max_guests", 11], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 41], ["pets_allowed", "f"], ["owner_id", 11]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "6"], ["house_id", "5"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.9ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Awesome Lakeview Hot TUB-Birds Eye Lookout-SAUNA"], ["price_per_night", 250], ["city", "Tahoe City"], ["max_guests", 10], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 5], ["reviews_count", 161], ["pets_allowed", "t"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "6"], ["house_id", "6"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Steps to Heavenly and Stateline"], ["price_per_night", 112], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 5], ["reviews_count", 166], ["pets_allowed", "t"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "8"], ["house_id", "7"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.9ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cozy Condo In the Heart of Incline"], ["price_per_night", 56], ["city", "Incline Village"], ["max_guests", 10], ["cleanliness_rating", 5], ["location_rating", 4], ["value_rating", 5], ["reviews_count", 120], ["pets_allowed", "f"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "3"], ["house_id", "8"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHouse Create (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "price_per_night", "city", "max_guests", "cleanliness_rating", "location_rating", "value_rating", "reviews_count", "pets_allowed", "owner_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Heavenly Cabin"], ["price_per_night", 175], ["city", "South Lake Tahoe"], ["max_guests", 6], ["cleanliness_rating", 5], ["location_rating", 5], ["value_rating", 4], ["reviews_count", 33], ["pets_allowed", "f"], ["owner_id", 10]]
+  [1m[36mStay Create (0.3ms)[0m  [1m[32mINSERT INTO "stays" ("guest_id", "house_id") VALUES (?, ?)[0m  [["guest_id", "1"], ["house_id", "9"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:01:42 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 611ms (Views: 604.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:01:44 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (25.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 81.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:01:46 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:01:46 -0700
+Started GET "/auth/facebook/callback?code=AQCiZm0V4Ov4kR9bDt1gaofHodyz9f8EicRozG3Bdtf8Gk6xK0oAMmrZ35KZi7fmyEXz0UqPIbt2ZI64U11kTlpWw1dzy3fqh8ZRn97MSP43gCvNIy_2lVxZwA1GfcXaE6hO_JqvvirpOeurg8prwyDoIrqe8uHuYsLEUqFxKHofvyFWLcxwDFRoQnXm6d37YIjBbOwonlRC7g-jFblkpRn5E4ZevhjWPDNyN4ZuaVc5S9EqhPl5ZL1EsACViFXXuIoTRB_PWI7fuUBrAJOd0hi8mGsJs9OGID-Vv0NhLDyAjph30fCl_qW7EfhzmTwfxic&state=9c3afc3624f7d7800ae7b66915ba816443f2bd51cd78be17" for 127.0.0.1 at 2019-04-09 12:01:46 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCiZm0V4Ov4kR9bDt1gaofHodyz9f8EicRozG3Bdtf8Gk6xK0oAMmrZ35KZi7fmyEXz0UqPIbt2ZI64U11kTlpWw1dzy3fqh8ZRn97MSP43gCvNIy_2lVxZwA1GfcXaE6hO_JqvvirpOeurg8prwyDoIrqe8uHuYsLEUqFxKHofvyFWLcxwDFRoQnXm6d37YIjBbOwonlRC7g-jFblkpRn5E4ZevhjWPDNyN4ZuaVc5S9EqhPl5ZL1EsACViFXXuIoTRB_PWI7fuUBrAJOd0hi8mGsJs9OGID-Vv0NhLDyAjph30fCl_qW7EfhzmTwfxic", "state"=>"9c3afc3624f7d7800ae7b66915ba816443f2bd51cd78be17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "image") VALUES (?, ?, ?, ?)[0m  [["name", "Barbara Choy"], ["password_digest", "$2a$10$4nxWTlo8UbdIw0GBeJaq5.hJHRdK6nEcCCKYXIrnk750wNDVeGTz."], ["email", "barbchoy@yahoo.com"], ["image", "http://graph.facebook.com/v2.10/10156880517010605/picture"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/12
+Completed 302 Found in 88ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2019-04-09 12:01:47 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 161ms (Views: 154.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-09 12:01:53 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (0.4ms)
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 143ms (Views: 96.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2019-04-09 12:02:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 80ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2019-04-09 12:02:03 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2019-04-09 12:02:08 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:02:18 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:02:18 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:02:21 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 229ms (Views: 226.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:02:24 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:06:27 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:06:28 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:06:29 -0700
+Started GET "/auth/facebook/callback?code=AQDYKDUHzkUpeDjtiD_NbbiKR0pojwI05btzhnf9V8eS5w6OthrK-imTLuqlL65dDz45ZJB4o7OcHRW_JPEiEGp949wHNqnjGWa6oxKW5vIvw7iCNVIjvQh7R4xG9x-h53wXV47emR3VbTP5RZOrPP-zfOT1bfq6Sg6aCt96V7x0nSDJRCzocBImyEFsbAcz1AKNHJX3Vo-75JRJRw7fU7tcVRUg-n9rjT2EudLXfzvXpdTNv80pUQ3vish-XYT39qL6n9MBRHyq9NdDWU4B6ehzcbJ9LLh11tGco_SxA9GYnGHR7A6abtqRRv7tb99oIP8&state=b5f1924d538ad0bc93ad5955f6150749f71fc3ccb2256754" for 127.0.0.1 at 2019-04-09 12:06:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDYKDUHzkUpeDjtiD_NbbiKR0pojwI05btzhnf9V8eS5w6OthrK-imTLuqlL65dDz45ZJB4o7OcHRW_JPEiEGp949wHNqnjGWa6oxKW5vIvw7iCNVIjvQh7R4xG9x-h53wXV47emR3VbTP5RZOrPP-zfOT1bfq6Sg6aCt96V7x0nSDJRCzocBImyEFsbAcz1AKNHJX3Vo-75JRJRw7fU7tcVRUg-n9rjT2EudLXfzvXpdTNv80pUQ3vish-XYT39qL6n9MBRHyq9NdDWU4B6ehzcbJ9LLh11tGco_SxA9GYnGHR7A6abtqRRv7tb99oIP8", "state"=>"b5f1924d538ad0bc93ad5955f6150749f71fc3ccb2256754"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "image") VALUES (?, ?, ?, ?)[0m  [["name", "Barbara Choy"], ["password_digest", "$2a$10$H5KHRjKeat9k1AqzhhqhROXVEXMMv6e7LOEby7MEDsKvBUrbx0JZC"], ["email", "barbchoy@yahoo.com"], ["image", "http://graph.facebook.com/v2.10/10156880517010605/picture"]]
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/13
+Completed 302 Found in 107ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2019-04-09 12:06:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 92ms (Views: 86.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:06:42 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:06:42 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 93ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:06:43 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 75ms (Views: 72.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:06:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qbj55CRp9RN20TLsRdSi8dx41uRSKyL9YqFt2CvMwQfieTx5CqDaE3rWsvOI2eWXPyYDJntDi+HInLIAH+kFSw==", "user_name"=>"Barbara Choy", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Barbara Choy"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /Users/barbchoy/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:15:57 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:15:58 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:15:58 -0700
+Started GET "/auth/facebook/callback?code=AQBlyhlLX6CeM22kzvgx_OsHRO5W7JoOF3hffcc8XswLivzDuPAqREB9EjadrsTzTosQ6W12kneDt3JmYxqJnccqtmQMk4Rz-uXAeTg2_4zAp2aTJ460VyYtfuHEFYjUAHsABT8_G6KzFLih0JM1YpeZ_mmcB3AYGGp7dJ4jghkr61FGYLPyT1cqhRsbHruj2zsAAZPTUmFJigb7bYq36zuCS5Z1FpkiNfA0i7pdWZeN38DGQbP1cXgNCGV6FvhFQc3pe251HRlOM5s4BIbHEI2-4x73Xbw_qIq1AhBWZZrlcly7c0abnxqF-jdupmm82lA&state=eb2d86900b6162ad941bd2fc305ffce79954e9f4a0e87490" for 127.0.0.1 at 2019-04-09 12:15:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBlyhlLX6CeM22kzvgx_OsHRO5W7JoOF3hffcc8XswLivzDuPAqREB9EjadrsTzTosQ6W12kneDt3JmYxqJnccqtmQMk4Rz-uXAeTg2_4zAp2aTJ460VyYtfuHEFYjUAHsABT8_G6KzFLih0JM1YpeZ_mmcB3AYGGp7dJ4jghkr61FGYLPyT1cqhRsbHruj2zsAAZPTUmFJigb7bYq36zuCS5Z1FpkiNfA0i7pdWZeN38DGQbP1cXgNCGV6FvhFQc3pe251HRlOM5s4BIbHEI2-4x73Xbw_qIq1AhBWZZrlcly7c0abnxqF-jdupmm82lA", "state"=>"eb2d86900b6162ad941bd2fc305ffce79954e9f4a0e87490"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "image", "uid") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbara Choy"], ["password_digest", "$2a$10$o0ysRBIw3an4OJLI74rjYOTHD5tYFq2QcR39Zu1hieW6z0ECjgO4u"], ["email", "barbchoy@yahoo.com"], ["image", "http://graph.facebook.com/v2.10/10156880517010605/picture"], ["uid", "10156880517010605"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/14
+Completed 302 Found in 89ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2019-04-09 12:15:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 114ms (Views: 108.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:24:49 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:24:49 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:24:50 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 115ms (Views: 85.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:24:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snvTZm6Uct+inBz1OrKIMU4K6tv/hl66sxCxEpLixIYRuhb7QF1d366bnOr3v89XrVQ/Gdbu96YZLW7KpscAyg==", "user_name"=>"John Elitch", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "John Elitch"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:26:26 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 97ms (Views: 77.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:26:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R8DYFM7U5zPjQ2GbxsAEuRGcOQsBRr7EpdZ3Jql8LebeR2QaSUcFtu7keNbKnFI4GunTP+/tpOrwjlTFv9dAmQ==", "user_name"=>"Megan Charpentier", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Megan Charpentier"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+     7: <%=form_tag signin_path do %>
+     8: 
+     9:   <label>Name: </label>
+    10:   <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+    11: 
+    12:   <label>Password: </label>
+    13:   <%= password_field_tag :password %><br>
+  
+app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb___3081111021270913141_70272487841720'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3081111021270913141_70272487841720'
+app/controllers/sessions_controller.rb:23:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:27:19 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:27:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"spsQwDBjCGBRsChsVpg0pshzZaOPWnH7o63A3l+kSGErHKzOt/Dq5VwXMSFaxGInwwaPl2Hxa9X29eM9SQ8lHg==", "user_name"=>"Quvenzhané Wallis", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Quvenzhané Wallis"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+     7: <%=form_tag signin_path do %>
+     8: 
+     9:   <label>Name: </label>
+    10:   <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+    11: 
+    12:   <label>Password: </label>
+    13:   <%= password_field_tag :password %><br>
+  
+app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb___3081111021270913141_70272478412040'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3081111021270913141_70272478412040'
+app/controllers/sessions_controller.rb:23:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:29:08 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 84ms (Views: 62.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:29:09 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:29:13 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QOq86mLLlMxu6WkiLWOCIHITtsECZG48yjzrAGpES3jjK3l3TAK7zGLu6T3gbsVGkU1jAysMxyBgATTYXmGPNA==", "user_name"=>"John Elitch", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "John Elitch"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+     7: <%=form_tag signin_path do %>
+     8: 
+     9:   <label>Name: </label>
+    10:   <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+    11: 
+    12:   <label>Password: </label>
+    13:   <%= password_field_tag :password %><br>
+  
+app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb___3081111021270913141_70272453640120'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3081111021270913141_70272453640120'
+app/controllers/sessions_controller.rb:24:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:29:24 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:29:28 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 12:29:34 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j4CbAZIpK1VYgr0WZ7T0Od72UGHCXsXqltaSDQmqIVyHp3FKWb6lpm9Wb8jpaoSvmN6dEBAGZ8NJv8faJZVNcQ==", "user"=>{"name"=>"Mary", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "owner") VALUES (?, ?, ?)[0m  [["name", "Mary"], ["password_digest", "$2a$10$pW2jvxBy7Z4LAU1fmT/t5OeESo.RUFrwB56u.aYl6vL0QCenOwqHq"], ["owner", nil]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/15/edit
+Completed 302 Found in 91ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users/15/edit" for 127.0.0.1 at 2019-04-09 12:29:34 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user.html.erb (5.4ms)
+  Rendered users/edit.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 200 OK in 317ms (Views: 308.8ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/15" for 127.0.0.1 at 2019-04-09 12:29:49 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pskG5wCOaZM2wrmZkr/lR/hmbvMIszcOM1627kcmsnQ/Trrphx2LFjtloNSe47PG8xOEx+YYLSBmBpUNUY3fCw==", "user"=>{"email"=>"mary@mary.com", "balance"=>"1000", "guests"=>"5", "pets"=>"true"}, "commit"=>"Update Profile", "id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "balance" = ?, "guests" = ?, "pets" = ? WHERE "users"."id" = ?[0m  [["email", "mary@mary.com"], ["balance", 1000], ["guests", 5], ["pets", "t"], ["id", 15]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/15
+Completed 302 Found in 19ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2019-04-09 12:29:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 116ms (Views: 111.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:29:53 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:29:53 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:29:55 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:30:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UZEteTvnZDleNs5WU2j6BhT54liWi8BtOAtzyRF2mxvyUOjkFS5LOVIxTkmeZb1g96c3mr/jaXGSNqwRJVNfVw==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:31:03 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 654ms (Views: 607.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:31:10 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iyd/dnZuR6UnaYlY0yzgHGoePKGDP3uNJrj/hCS3DYUSoMN48f2lICrOkBXfcLadYWvWlW2UYaNz4NxnMhxg+g==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/users/15
+Completed 302 Found in 81ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2019-04-09 12:31:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/15/edit" for 127.0.0.1 at 2019-04-09 12:31:13 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_user.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:31:16 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:31:16 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 260ms (Views: 257.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:31:19 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 75ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:31:36 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 97ms (Views: 87.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:31:41 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XG6W9+g5okQCp/RtNNqwJ/J2nKUqgNwp+gmrZdcw4pf/r1NqxvCNRA6gdHL51/dBEShJZwPodTVQNHS94xUm2w==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+     7: <%=form_tag signin_path do %>
+     8: 
+     9:   <label>Name: </label>
+    10:   <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+    11: 
+    12:   <label>Password: </label>
+    13:   <%= password_field_tag :password %><br>
+  
+app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__2253566417080723632_70128923350600'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__2253566417080723632_70128923350600'
+app/controllers/sessions_controller.rb:23:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:32:25 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 99ms (Views: 76.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:32:31 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRnCzEha/+fTs2hTtFydZW589amu/rcnEgF8k5R46xcYnn7Cz8kdYt4UcR64AMvkZQkfnUBVrQlHWV9wgtOGaA==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/users/15
+Completed 302 Found in 82ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2019-04-09 12:32:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 66ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:32:33 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:32:33 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:32:34 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:32:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YG7cBtFTwkoIw7yjWDotdpKj6WvsCnvPrq+AX4auo9+QH7tNYxgCSQkju1Aba/TORRaZ4bYgPOUh2HZSj9+ww==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+     7: <%=form_tag signin_path do %>
+     8: 
+     9:   <label>Name: </label>
+    10:   <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+    11: 
+    12:   <label>Password: </label>
+    13:   <%= password_field_tag :password %><br>
+  
+app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__2253566417080723632_70128923050280'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__2253566417080723632_70128923050280'
+app/controllers/sessions_controller.rb:22:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:34:13 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 72ms (Views: 49.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:34:31 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (33334.9ms)
+Completed 200 OK in 33444ms (Views: 33440.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:35:04 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13744.2ms)
+Completed 200 OK in 13798ms (Views: 13793.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:35:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk3noWqgCa5lU3LaskuqX4OwoDAn+8KhYyDMXA3L1fEzyluv7TPrK2j0a5e+F/zeiMVKBMlQ2I82eO+/G2C4jg==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (20788.0ms)
+Completed 500 Internal Server Error in 20870ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+     7: <%=form_tag signin_path do %>
+     8:   <%binding.pry%>
+     9:   <label>Name: </label>
+    10:   <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+    11: 
+    12:   <label>Password: </label>
+    13:   <%= password_field_tag :password %><br>
+  
+app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__2253566417080723632_70128886980760'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__2253566417080723632_70128886980760'
+app/controllers/sessions_controller.rb:22:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:36:48 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 134ms (Views: 114.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:36:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tN6EZNAqjPr8yIyCFjp2aRZDPZG8vR0UD1TtUtoXxmMtWThqV7luf/Fvlc8aZiDoHTbXpVIWBzpaDM6xzLyrHA==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/users/15
+Completed 302 Found in 80ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2019-04-09 12:36:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 95ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:36:57 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:36:58 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 457ms (Views: 454.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:36:59 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:37:24 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:38:24 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 652ms (Views: 600.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:38:31 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JBJWSlTS6vwT6ZnGbWMfnS/WTlylWsaNLuug5QCm8zW9lepE00EIeR5OgIthP0kcJKOkaEvx3KN7s4MGFg2eSg==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/users/15
+Completed 302 Found in 84ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2019-04-09 12:38:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:38:33 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:38:33 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:38:34 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:38:34 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 89ms (Views: 84.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:38:42 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cysXOJAac8t77L6vJsEBWj8SqrMGrSOFeCZ8ybCLT2LQ6tKlvtNcy3frPrDrzEY83Ex/cS/FipnSG6MRhK6LLg==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/users/new
+Completed 302 Found in 82ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:38:42 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 125ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:39:31 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 88ms (Views: 65.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:39:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0E/zC4NdC9eadPWnLTYxy+Z4KnceNVBMw0dVb3XMPW1zjjaWrZQk15ZzdbjgO3atBSb/tTdd+VBpeoq3Qen5IQ==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 670ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `signin' for #<SessionsController:0x00007fadb8b22c18>
+Did you mean?  signin_url):
+  
+app/controllers/sessions_controller.rb:22:in `create'
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:39:46 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 270ms (Views: 243.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:39:52 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tfne+vnjuZoQPbUFzYo6fsxoOSlf+hT5G2WYaDE4BJTUfmL0fnBbHx2arEjB1mz/xx3THbFRDtdOPbuLJ5Np6w==", "user_name"=>"Mary", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 83ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:39:52 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2019-04-09 12:39:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NZ3SXMySutSKWU6IsCNdgm6zwcl0e7Q6Aa4uvn+VZwasGm5SSwFYUYf+V8W8fwsDZcYr/ZrQrhRU9g1daT4KeQ==", "user_name"=>"Kaleo Elam", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kaleo Elam"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 82ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 12:39:58 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 112ms (Views: 107.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:40:01 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 12:40:01 -0700
+Started GET "/auth/facebook/callback?code=AQDtlW5QQzAGPOski3v-ru_74c7AjsXXyM9dzaIPqLYhACn_soMVbpys20zC3Fgsga-SxBbOV9NPti3RUzqtGBXH2St-n2M9cjcm_Pjp6tNBxnDcJagMJPhcXV5BX75ZQPz_uZW8XrlzKY_hdwoUcZwgz4yrPrPOi92tOWinUCuIHWWRiJe3ThalA8WOcCVpD_sRMwLVxpZ8ob5z3pBCu4GT5CZgRVwgXYF9zTSjSsY0XY3qs0nuEMRHDqh9ZvrCCa6MbGFhFGwgdUzVf6viTCE5PdMEqGCM_TLq3Lk_fWbFaCAlKZrFsmy_8H3J-P_bWZQ&state=7bae4d24f1de94d00503c685dcc7638262f49b17cf2cafaa" for 127.0.0.1 at 2019-04-09 12:40:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDtlW5QQzAGPOski3v-ru_74c7AjsXXyM9dzaIPqLYhACn_soMVbpys20zC3Fgsga-SxBbOV9NPti3RUzqtGBXH2St-n2M9cjcm_Pjp6tNBxnDcJagMJPhcXV5BX75ZQPz_uZW8XrlzKY_hdwoUcZwgz4yrPrPOi92tOWinUCuIHWWRiJe3ThalA8WOcCVpD_sRMwLVxpZ8ob5z3pBCu4GT5CZgRVwgXYF9zTSjSsY0XY3qs0nuEMRHDqh9ZvrCCa6MbGFhFGwgdUzVf6viTCE5PdMEqGCM_TLq3Lk_fWbFaCAlKZrFsmy_8H3J-P_bWZQ", "state"=>"7bae4d24f1de94d00503c685dcc7638262f49b17cf2cafaa"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+Redirected to https://localhost:3000/users/14
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2019-04-09 12:40:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2019-04-09 12:40:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 78ms (Views: 73.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2019-04-09 12:40:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 12:40:16 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:40:16 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:40:17 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+

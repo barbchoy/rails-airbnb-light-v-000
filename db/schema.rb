@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_03_30_061729) do
     t.integer "cleanliness_rating"
     t.integer "location_rating"
     t.integer "value_rating"
-    t.integer "reviews_count"
+    t.integer "reviews_count", default: 0
     t.boolean "pets_allowed"
     t.integer "owner_id"
     t.index ["owner_id"], name: "index_houses_on_owner_id"
@@ -34,8 +34,11 @@ ActiveRecord::Schema.define(version: 2019_03_30_061729) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
-    t.integer "balance"
-    t.integer "guests"
+    t.string "email"
+    t.string "image"
+    t.string "uid"
+    t.integer "balance", default: 0
+    t.integer "guests", default: 0
     t.boolean "pets", default: false
     t.boolean "owner", default: false
   end

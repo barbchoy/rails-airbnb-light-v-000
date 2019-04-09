@@ -7,12 +7,16 @@
 <%=form_tag signin_path do %>
 
   <label>Name: </label>
-  <%= select_tag :user_name, options_for_select(User.all.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
+  <%= select_tag :user_name, options_for_select(@non_oauth_users.collect {|p| [p.name, p.name]}), :disabled => false, :include_blank => "Please select your username from this dropdown" %><br>
 
   <label>Password: </label>
   <%= password_field_tag :password %><br>
   <%= submit_tag "Sign In"%>
 <% end %>
+
+<br><p>------- OR -------</p>
+
+<p><%= link_to('Log in with Facebook!', '/auth/facebook') %></p>
 
 <br>
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>

@@ -3,6 +3,9 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       t.string :name
       t.string :password_digest
+      t.string  :email
+      t.string  :image
+      t.string  :uid
       t.integer :balance, :default => 0
       t.integer :guests, :default => 0
       t.boolean :pets, :default => false
