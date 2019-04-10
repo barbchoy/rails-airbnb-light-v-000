@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'reviews/show'
+  get 'reviews/index'
+  get 'reviews/new'
+  get 'reviews/edit'
+  get 'reviews/delete'
   get 'stays/create'
   # get 'houses/index'
   # get 'houses/create'

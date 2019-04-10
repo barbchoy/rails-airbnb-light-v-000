@@ -15,7 +15,11 @@
 <%= hidden_field_tag(:guest_id, current_user.id) %>
 <%= hidden_field_tag(:house_id, @house.id) %>
 <% if @house.owner == current_user %>
-  <%= link_to "Edit House", edit_house_path(@house)%><br><br>
+  <%= link_to "Edit House", edit_house_path(@house)%><br>
+
+  <%= link_to 'Delete House', house_path(@house),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %><br><br>
 <% elsif !current_user.owner %>
   <label>How many days are you going to stay?</label>
   <%= text_field_tag :days %><br>
