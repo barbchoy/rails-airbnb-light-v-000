@@ -18999,3 +18999,433 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:29:12 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:29:13 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:29:15 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:17 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:17 -0700
+Started GET "/auth/facebook/callback?code=AQDW08fT8ihcTjfXn5Hrqi8csVC7LwgnnwJAugDSX6MN6y37Qxa2DJJ5DkR1khUTx0nuOvSjcnYzE0-xu4lZ4m7_DQXU5GWJe3Uy6o33v3Ad2r6ZjVLGU6ZpzLnN0xIcVWePZ93d-yZOpmsQLT0ZwzHhvUxrG9bOxycaC5jyesZYrdb0EcBhTD-Iai_M5FNYQnBXlyRBfTsNRm1SGhm_78emvsujYnXN2sx7Km-a1illpCjXogvlDaQoQssj2VV0TwEQHjseTQeDthH2HAwTv6YCI37tbOy6Jl4DX1slq-6wm5OB1HcaDTc-GcxKotIvW3g&state=d792e7b47c08ffa5557a7b416d9a0eec0029f4eb23954cf2" for 127.0.0.1 at 2019-04-09 20:29:17 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDW08fT8ihcTjfXn5Hrqi8csVC7LwgnnwJAugDSX6MN6y37Qxa2DJJ5DkR1khUTx0nuOvSjcnYzE0-xu4lZ4m7_DQXU5GWJe3Uy6o33v3Ad2r6ZjVLGU6ZpzLnN0xIcVWePZ93d-yZOpmsQLT0ZwzHhvUxrG9bOxycaC5jyesZYrdb0EcBhTD-Iai_M5FNYQnBXlyRBfTsNRm1SGhm_78emvsujYnXN2sx7Km-a1illpCjXogvlDaQoQssj2VV0TwEQHjseTQeDthH2HAwTv6YCI37tbOy6Jl4DX1slq-6wm5OB1HcaDTc-GcxKotIvW3g", "state"=>"d792e7b47c08ffa5557a7b416d9a0eec0029f4eb23954cf2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 77ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:29:17 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:23 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:23 -0700
+Started GET "/auth/facebook/callback?code=AQCykQhvuUKu63gyBn9-s2Rpvekqoi6BwRtV7ReU1TC13Ipv_49PnLpKhRXrcwcrt09af--_2bq_Zs339PxwjDFieA_1v7Fuag1TwXUChKSnM-CyCElQRXswKT8ezXVMwNO-yHDZo0n4UcwvgBgTPDVObsaUt0DEijbageaE1BA345FmQOhPYG4A8B3ezfZtfOdl_Ow5N9lGhfB4CAFsptgKbvNB5SMxvPSKGOYlC2g2-RT-EqyqAiPs5wKiZXOaIV_bVMNe2HE4zpHRMtvTx5qJU-N5PDY2pyKNmE_ojVlopWgKT_5Pl3g9Ou47tUEAsB4&state=2512ac4b43a8246598983305dba2bf0bfb1a39adef022324" for 127.0.0.1 at 2019-04-09 20:29:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCykQhvuUKu63gyBn9-s2Rpvekqoi6BwRtV7ReU1TC13Ipv_49PnLpKhRXrcwcrt09af--_2bq_Zs339PxwjDFieA_1v7Fuag1TwXUChKSnM-CyCElQRXswKT8ezXVMwNO-yHDZo0n4UcwvgBgTPDVObsaUt0DEijbageaE1BA345FmQOhPYG4A8B3ezfZtfOdl_Ow5N9lGhfB4CAFsptgKbvNB5SMxvPSKGOYlC2g2-RT-EqyqAiPs5wKiZXOaIV_bVMNe2HE4zpHRMtvTx5qJU-N5PDY2pyKNmE_ojVlopWgKT_5Pl3g9Ou47tUEAsB4", "state"=>"2512ac4b43a8246598983305dba2bf0bfb1a39adef022324"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 78ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:29:24 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:29 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:29 -0700
+Started GET "/auth/facebook/callback?code=AQBL446NTiKHHCG9QZGhvBBGOh1c9_Z3ZOe2fTuZ5FigKxGyIoHTmjQMquy3zI3dfu2ykZWInd7BWhck3zSJQw29XEBVaAbrPFntkLzp3ZgNh8mwgeKfkVlHT_tXvWFiRtFUexAJ52bi849BPqAV0LiXgkOaPRijic4eLzrheYDJNl9ZuN07GjCa8DdQ_NNjgDoHHnR7I01FgEkhfyNGipsilKyfDBoavY2rQT8GVSOEdSof-kV3_OLS-n-rsOciLU3bZop7Fr72dRNNNtDHAu_Tkve_LEJQK73LF8YFrN1ELdYVXAokJoNGaqc7h9mD7bU&state=fa22ed61e40040c7e1b2efa9f4560f018f83f39b546bf75d" for 127.0.0.1 at 2019-04-09 20:29:30 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBL446NTiKHHCG9QZGhvBBGOh1c9_Z3ZOe2fTuZ5FigKxGyIoHTmjQMquy3zI3dfu2ykZWInd7BWhck3zSJQw29XEBVaAbrPFntkLzp3ZgNh8mwgeKfkVlHT_tXvWFiRtFUexAJ52bi849BPqAV0LiXgkOaPRijic4eLzrheYDJNl9ZuN07GjCa8DdQ_NNjgDoHHnR7I01FgEkhfyNGipsilKyfDBoavY2rQT8GVSOEdSof-kV3_OLS-n-rsOciLU3bZop7Fr72dRNNNtDHAu_Tkve_LEJQK73LF8YFrN1ELdYVXAokJoNGaqc7h9mD7bU", "state"=>"fa22ed61e40040c7e1b2efa9f4560f018f83f39b546bf75d"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 79ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:29:30 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:32 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:29:32 -0700
+Started GET "/auth/facebook/callback?code=AQAQ4vCrR-hrPbeTTMUPHqvKk4K4feSCdWZ5YlLMh2hJROOa8fRJtKQCZlBANCEl7Z-X92lxofeGX2b5_S-n9WYyoxsNAvoLxWjdekYobCjxLbI3dacQcj-V30G48vEJG0JPv8jpfAiNiGTBLs6AQUIGcHjLK8GwXPsvmC9JWem6I3vGiu2KdbxiuTUvQA2HunxywYGTH76S8FX8U6s_giqBaIcFoqx61jYh6s8lyp2471J1El1KekOJguofjZy1KyJ1iTAmUcZqrp96C3O_ULiR85wC5b9cLJ-IPb6NqRbE3n3TQqbeyFOeZNLjScs2IX4&state=c4d922e22f7fc384a39cf509229ce6318855e5db0f61f74f" for 127.0.0.1 at 2019-04-09 20:29:32 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAQ4vCrR-hrPbeTTMUPHqvKk4K4feSCdWZ5YlLMh2hJROOa8fRJtKQCZlBANCEl7Z-X92lxofeGX2b5_S-n9WYyoxsNAvoLxWjdekYobCjxLbI3dacQcj-V30G48vEJG0JPv8jpfAiNiGTBLs6AQUIGcHjLK8GwXPsvmC9JWem6I3vGiu2KdbxiuTUvQA2HunxywYGTH76S8FX8U6s_giqBaIcFoqx61jYh6s8lyp2471J1El1KekOJguofjZy1KyJ1iTAmUcZqrp96C3O_ULiR85wC5b9cLJ-IPb6NqRbE3n3TQqbeyFOeZNLjScs2IX4", "state"=>"c4d922e22f7fc384a39cf509229ce6318855e5db0f61f74f"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:29:32 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/barbchoy/.rvm/gems/ruby-2.6.1/bin/thin:23)
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:30:01 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1093ms (Views: 1085.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:30:04 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 150ms (Views: 91.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:30:05 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:30:05 -0700
+Started GET "/auth/facebook/callback?code=AQAwcn3eXkuTWKYomrtGFtVouVWIxQ-mE-qjesjjtSTfI9VMbrAuRJU13ZyUZBUJKlj73s9u_WFnv4v7iELidref7iJ0YlFiRRqQWvzvng8gSXwTEnUNcQyZKl5vEmUgDAzU7oKCJLqU7Hpf_CUgkLNF-cJwPAGx-SwrJ-xUinRUe6Yy7RQ1TnlB-h_-jM4cIZhk4tWy5MJ9y3TSdYDVM_Ev63JcawTxpuPG96eDzflErEP0BHGVzlHDDVy6bdkTj8mgJNeH_-7Zem12qxHQeBagkoJeng40yFzD9hBLxcTUfwEY2V4wfqMl-WQpFeQ19wo&state=f20a85a68d92718935db773025591eeaef91b9063b29c5bc" for 127.0.0.1 at 2019-04-09 20:30:05 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAwcn3eXkuTWKYomrtGFtVouVWIxQ-mE-qjesjjtSTfI9VMbrAuRJU13ZyUZBUJKlj73s9u_WFnv4v7iELidref7iJ0YlFiRRqQWvzvng8gSXwTEnUNcQyZKl5vEmUgDAzU7oKCJLqU7Hpf_CUgkLNF-cJwPAGx-SwrJ-xUinRUe6Yy7RQ1TnlB-h_-jM4cIZhk4tWy5MJ9y3TSdYDVM_Ev63JcawTxpuPG96eDzflErEP0BHGVzlHDDVy6bdkTj8mgJNeH_-7Zem12qxHQeBagkoJeng40yFzD9hBLxcTUfwEY2V4wfqMl-WQpFeQ19wo", "state"=>"f20a85a68d92718935db773025591eeaef91b9063b29c5bc"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 94ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:30:06 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:30:35 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:30:36 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:30:38 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 68ms (Views: 42.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:30:39 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:30:39 -0700
+Started GET "/auth/facebook/callback?code=AQAXFAQwh6NsYubfxw6pvWdC7q3wzSPr6JVw2BkUkfF-kIG7AAZNjpIkykYT9A0PvA2gTtuuUKdeULB5rJm3mAEpVba570o4MW8vNww0AhjvaliGfwzOKD7VP2-EaAHR_IhIcGHEwUnL85X7hwxRvtoFJxJFOeKgt7crPbG1u1t53iB03xFEQK-S9Va591AxG9FNS3WWlH4i4cY9Xk97mnsSlSf7DBBrB2jSwTBNmoaKfcBSKSmN18HymHRFTK43ELBlbgt6YAM55CjKtkNnmpDztKpP-R52v0lB7LigMlwTS_mEYZbqxSangWyJvzk9EF0&state=4e2df16332e7ea23687d6064d80f860031f5462256502fad" for 127.0.0.1 at 2019-04-09 20:30:39 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAXFAQwh6NsYubfxw6pvWdC7q3wzSPr6JVw2BkUkfF-kIG7AAZNjpIkykYT9A0PvA2gTtuuUKdeULB5rJm3mAEpVba570o4MW8vNww0AhjvaliGfwzOKD7VP2-EaAHR_IhIcGHEwUnL85X7hwxRvtoFJxJFOeKgt7crPbG1u1t53iB03xFEQK-S9Va591AxG9FNS3WWlH4i4cY9Xk97mnsSlSf7DBBrB2jSwTBNmoaKfcBSKSmN18HymHRFTK43ELBlbgt6YAM55CjKtkNnmpDztKpP-R52v0lB7LigMlwTS_mEYZbqxSangWyJvzk9EF0", "state"=>"4e2df16332e7ea23687d6064d80f860031f5462256502fad"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 77ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:30:40 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:31:19 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:31:19 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:31:21 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 72ms (Views: 45.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:31:23 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:31:23 -0700
+Started GET "/auth/facebook/callback?code=AQDemWbs9Te_oNZULBpQPqi1FLOeNmYLzKZKTfjRqYUuUZtJBhjSWBN9UQ2W-J--E8VpKC1oddh0Fm4bHvxsF4Ks_fD217JafiT3RSRtxRq9MFRqtbvQICdsNKXWXti_7Yw6cgCl7tGZewlZpSv251MNucVRV7fdupzhk5d10_ncpFMdUkanAl3lPLwtBeEmG_0gaWpi_l3wu7q68Bq26VpOhuMPbUgv-sDNCiNC_hj-H-NDkScPZOe5tB3RvwA4CVoZ8S-EvZQP1EP3A_GfkgEY_Bun1bDwTTnOhWqUXu-fG36f3ol25n0OZJDvRqAk08E&state=b6bcb881ddf0b933089f79105c5f48838fe41a82aa1923e7" for 127.0.0.1 at 2019-04-09 20:31:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDemWbs9Te_oNZULBpQPqi1FLOeNmYLzKZKTfjRqYUuUZtJBhjSWBN9UQ2W-J--E8VpKC1oddh0Fm4bHvxsF4Ks_fD217JafiT3RSRtxRq9MFRqtbvQICdsNKXWXti_7Yw6cgCl7tGZewlZpSv251MNucVRV7fdupzhk5d10_ncpFMdUkanAl3lPLwtBeEmG_0gaWpi_l3wu7q68Bq26VpOhuMPbUgv-sDNCiNC_hj-H-NDkScPZOe5tB3RvwA4CVoZ8S-EvZQP1EP3A_GfkgEY_Bun1bDwTTnOhWqUXu-fG36f3ol25n0OZJDvRqAk08E", "state"=>"b6bcb881ddf0b933089f79105c5f48838fe41a82aa1923e7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (6.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "email", "image", "uid") VALUES (?, ?, ?, ?)[0m  [["password_digest", "$2a$10$Yo9syS/x9nrKxnNqfe70zOn2ZiLuW6BWrUFsvhOjzqBt/gRBs8kz2"], ["email", "barbchoy@yahoo.com"], ["image", "http://graph.facebook.com/v2.10/10156880517010605/picture"], ["uid", "10156880517010605"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/15
+Completed 302 Found in 111444ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2019-04-09 20:33:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 97ms (Views: 89.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 20:34:47 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:34:48 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 151ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:34:50 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 42.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:34:51 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:34:51 -0700
+Started GET "/auth/facebook/callback?code=AQDyqm74Mdo6c_emp9gaPkW9eAxUghuF64As3e3_I8u8RcLEku2iisoqIgWEyLKE0QfdYuP57ZwF7J-FPDGMD1kP86fZqbVwnPdJVUv8B26MfmA9FDbfL6L3UmajOKQcYEvW560SJRPPfw_lSJPfWJpH3P5ZgeUgMnwKEH1aTGBIaTfAia4w38Prh1-YaM-luhX4dbAAtzvXrK4W8knkH5ZtANe7atUkkVzQ9arqNipQrN-03fbyNut-NDy9-k395pwBrSxgXs3wyYs-qJoH36f_78t5NrsGGallyO_71V8Dw5GtLSLkhhIgAqQN2RyRaCg&state=3041162367910b29b219d0dfa9111d7b5162b3ff55c04397" for 127.0.0.1 at 2019-04-09 20:34:51 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDyqm74Mdo6c_emp9gaPkW9eAxUghuF64As3e3_I8u8RcLEku2iisoqIgWEyLKE0QfdYuP57ZwF7J-FPDGMD1kP86fZqbVwnPdJVUv8B26MfmA9FDbfL6L3UmajOKQcYEvW560SJRPPfw_lSJPfWJpH3P5ZgeUgMnwKEH1aTGBIaTfAia4w38Prh1-YaM-luhX4dbAAtzvXrK4W8knkH5ZtANe7atUkkVzQ9arqNipQrN-03fbyNut-NDy9-k395pwBrSxgXs3wyYs-qJoH36f_78t5NrsGGallyO_71V8Dw5GtLSLkhhIgAqQN2RyRaCg", "state"=>"3041162367910b29b219d0dfa9111d7b5162b3ff55c04397"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "email", "image", "uid") VALUES (?, ?, ?, ?)[0m  [["password_digest", "$2a$10$iSI0CG7t1uedwR322uzaLu22UPVAE3va9iqI9LWk40goWHLMG6t4O"], ["email", "barbchoy@yahoo.com"], ["image", "http://graph.facebook.com/v2.10/10156880517010605/picture"], ["uid", "10156880517010605"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/16
+Completed 302 Found in 37954ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at 2019-04-09 20:35:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 96ms (Views: 75.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-04-09 20:35:34 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to https://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 20:35:34 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:35:36 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 65ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:35:38 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:35:38 -0700
+Started GET "/auth/facebook/callback?code=AQBBoLfQ2GziEGFWddbNIy-2ZWCxGREkVMPXpf5CbUF0XGHP4TbroTJSy548GTxsu0L1nwZ83-zmXnDtMZYR_PKETibprbsaq1TmGm8v2vr8rmXQK9mukKP0P0CGENjbME2UFFyJgXhBVwadRRs-tVAMgajl8M5jd0sLZ5NuJrYk1GKemPkB3zpFpVXpuCw_mhpVottJL-Bg-GL4em16e9KKlqI614kqmVP3AuyLWKt3jxNlxqZLi4KlzHng2HuNl2jvnYyTGIsIW86WQe6ipqcTSfslvZmxPHBEFo09gaylVEpCU-5F32ehhjwxeNpkAr4&state=492560cda983b0ac4888c741da5be1ab479ae6a9ad5faf4f" for 127.0.0.1 at 2019-04-09 20:35:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBBoLfQ2GziEGFWddbNIy-2ZWCxGREkVMPXpf5CbUF0XGHP4TbroTJSy548GTxsu0L1nwZ83-zmXnDtMZYR_PKETibprbsaq1TmGm8v2vr8rmXQK9mukKP0P0CGENjbME2UFFyJgXhBVwadRRs-tVAMgajl8M5jd0sLZ5NuJrYk1GKemPkB3zpFpVXpuCw_mhpVottJL-Bg-GL4em16e9KKlqI614kqmVP3AuyLWKt3jxNlxqZLi4KlzHng2HuNl2jvnYyTGIsIW86WQe6ipqcTSfslvZmxPHBEFo09gaylVEpCU-5F32ehhjwxeNpkAr4", "state"=>"492560cda983b0ac4888c741da5be1ab479ae6a9ad5faf4f"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 78ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:35:39 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:35:40 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:35:41 -0700
+Started GET "/auth/facebook/callback?code=AQD8AnQUX6aDMgEc8vRHlYESxyzPPbU43J6L127JJG1uBcOGotIPE2Uot6m_57kG2So3Li06WqS8oDJ59o8nkVsxfv98tmbwt3Icw8umlqecbWtMh8dp3RmQ1kueVRaWOruCTihfgtAWk2K_Q8dlli24YXQ0ok3FzmFPnXJtea_3H-rUOVqhWQLYWEMGk9IJm6Igp1yb2PoVBzI1Ewjm1CNGaJQwFvIPTX4NDr0jxknzFSQt05df3JWzPgwQZlHSDlf5-LTQiSnVn7wSosksoXwAGsaoVzZHt7_wSFiJZ6NNeJfhvgWTPZaqZEwa4_rvCTo&state=3b1a64eee3787a23eb42ec1ae42d7d6b19e00d20bff2db7a" for 127.0.0.1 at 2019-04-09 20:35:41 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD8AnQUX6aDMgEc8vRHlYESxyzPPbU43J6L127JJG1uBcOGotIPE2Uot6m_57kG2So3Li06WqS8oDJ59o8nkVsxfv98tmbwt3Icw8umlqecbWtMh8dp3RmQ1kueVRaWOruCTihfgtAWk2K_Q8dlli24YXQ0ok3FzmFPnXJtea_3H-rUOVqhWQLYWEMGk9IJm6Igp1yb2PoVBzI1Ewjm1CNGaJQwFvIPTX4NDr0jxknzFSQt05df3JWzPgwQZlHSDlf5-LTQiSnVn7wSosksoXwAGsaoVzZHt7_wSFiJZ6NNeJfhvgWTPZaqZEwa4_rvCTo", "state"=>"3b1a64eee3787a23eb42ec1ae42d7d6b19e00d20bff2db7a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to https://localhost:3000/signin
+Completed 302 Found in 80ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2019-04-09 20:35:41 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 16]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:35:48 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2019-04-09 20:35:48 -0700
+Started GET "/auth/facebook/callback?code=AQANuUyL-tYsOqZXM_0XAsvidiGrwnLp3TSbl-esUe3fF17Q0Af4FVzgF9NR_BCpyrjoyW61Pm50xSY9fCtGRzSA_lJxym3mjGjQWDfrGVj43Jx5tYtReJCXGMjUmhOw6o-jkEwpRNEM50GW9RxbJEE6F7z_GN2WnPIOpmrsv1burMpTeAY5PLcYjMuVTXWr_z8MDqcpfSCkT_Oe9ErAjDGw6QAejdNfanl1Sgph_X6Ct1IcrFTdPY7OfKcYZphI6UNGa0U374-yITr9NyAda4jPM73wRoz2rHyv-ZkVyJ4mpcqQPfOBLCG1uDIf_5goAEQ&state=84d50db287004791e8e8b0e5a6aba43f659157b2cf62592d" for 127.0.0.1 at 2019-04-09 20:35:48 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQANuUyL-tYsOqZXM_0XAsvidiGrwnLp3TSbl-esUe3fF17Q0Af4FVzgF9NR_BCpyrjoyW61Pm50xSY9fCtGRzSA_lJxym3mjGjQWDfrGVj43Jx5tYtReJCXGMjUmhOw6o-jkEwpRNEM50GW9RxbJEE6F7z_GN2WnPIOpmrsv1burMpTeAY5PLcYjMuVTXWr_z8MDqcpfSCkT_Oe9ErAjDGw6QAejdNfanl1Sgph_X6Ct1IcrFTdPY7OfKcYZphI6UNGa0U374-yITr9NyAda4jPM73wRoz2rHyv-ZkVyJ4mpcqQPfOBLCG1uDIf_5goAEQ", "state"=>"84d50db287004791e8e8b0e5a6aba43f659157b2cf62592d"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10156880517010605"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "image", "uid") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbara Choy"], ["password_digest", "$2a$10$MIXlw1kGFq9Fzipojgjc6.zS4JVKgz6e6Jy.x48E9jsN5bg4YYcQK"], ["email", "barbchoy@yahoo.com"], ["image", "http://graph.facebook.com/v2.10/10156880517010605/picture"], ["uid", "10156880517010605"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost:3000/users/17
+Completed 302 Found in 13686ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2019-04-09 20:36:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-09 20:36:18 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (0.7ms)
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (81.2ms)
+Completed 200 OK in 212ms (Views: 123.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2019-04-09 20:36:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2019-04-09 20:36:31 -0700
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (1.1ms)
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered houses/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses/9" for 127.0.0.1 at 2019-04-09 20:36:32 -0700
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered houses/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 207ms (Views: 201.5ms | ActiveRecord: 0.6ms)
+
+
