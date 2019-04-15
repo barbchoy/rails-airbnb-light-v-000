@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   has_many :stays
   has_many :houses, through: :stays
   has_many :properties, :class_name => 'House', :foreign_key => 'owner_id'
+  has_many :reviews
+
+  accepts_nested_attributes_for :reviews
 
   has_secure_password
 

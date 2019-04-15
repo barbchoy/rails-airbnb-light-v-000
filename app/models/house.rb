@@ -5,6 +5,9 @@ class House < ApplicationRecord
   has_many  :stays
   has_many  :guests, through: :stays, :class_name => "User"
   belongs_to :owner, :class_name => "User"
+  has_many :reviews
+
+  accepts_nested_attributes_for :reviews
 
   def cleanliness_rating
     0

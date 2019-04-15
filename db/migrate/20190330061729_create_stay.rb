@@ -1,8 +1,8 @@
 class CreateStay < ActiveRecord::Migration[5.2]
   def change
     create_table :stays do |t|
-      t.string :guest_id
-      t.string :house_id
+      t.integer :guest_id
+      t.integer :house_id
     end
   end
 end

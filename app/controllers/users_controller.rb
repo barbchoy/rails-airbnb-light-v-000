@@ -20,12 +20,11 @@ class UsersController < ApplicationController
   def show
     redirect_to '/' unless current_user
     @message = params[:message]
+    @house = params[:house]
     @user = User.find(params[:id])
+
   end
 
-  def update
-    redirect_to user_path(current_user)
-  end
 
   def edit
     @user = User.find(params[:id])

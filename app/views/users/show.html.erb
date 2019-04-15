@@ -1,8 +1,3 @@
-
-<% if @message %>
-<p><%= @message %></p>
-<% end %>
-
 <p>Name: <%= @user.name %></p>
 <% if @user.image %>
     <img src="<%= @user.image %>">
@@ -13,4 +8,12 @@
   <%= render partial: 'form', locals: {user: @user} %>
   <%= link_to "Edit Profile", edit_user_path(@user) %>&nbsp&nbsp&nbsp&nbsp
 <% end %>
-<%= link_to "See All Houses", "/houses" %>
+<%= link_to "See All Houses", "/houses" %><br><br>
+
+<% if @message %>
+<%= @message %>
+<% end %>
+
+<% if @house && @message.include?("Thank you")%>
+    &nbsp&nbsp<%= link_to "Write a review", new_user_review_path(@user), @house %>
+<% end %>

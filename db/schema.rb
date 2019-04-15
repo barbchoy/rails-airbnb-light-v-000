@@ -27,11 +27,13 @@ ActiveRecord::Schema.define(version: 2019_04_10_025105) do
     t.decimal "location_rating"
     t.decimal "value_rating"
     t.text "comments"
+    t.integer "house_id"
+    t.integer "guest_id"
   end
 
   create_table "stays", force: :cascade do |t|
-    t.string "guest_id"
-    t.string "house_id"
+    t.integer "guest_id"
+    t.integer "house_id"
   end
 
   create_table "users", force: :cascade do |t|

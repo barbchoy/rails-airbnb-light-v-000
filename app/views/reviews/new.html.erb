@@ -1,2 +1,36 @@
 <h1>Reviews#new</h1>
 <p>Find me in app/views/reviews/new.html.erb</p>
+
+<h1>Please rate the following.</h1>
+<h3>1 - the worst</h3>
+<h3>5 - the best</h3>
+
+<%= form_tag user_reviews_path do %>
+  <label>Cleanliness Rating: </label>&nbsp&nbsp
+  <%= radio_button_tag(:'review[cleanliness_rating]', "1") %> 1&nbsp&nbsp
+  <%= radio_button_tag(:'review[cleanliness_rating]', "2") %> 2&nbsp&nbsp
+  <%= radio_button_tag(:'review[cleanliness_rating]', "3") %> 3&nbsp&nbsp
+  <%= radio_button_tag(:'review[cleanliness_rating]', "4") %> 4&nbsp&nbsp
+  <%= radio_button_tag(:'review[cleanliness_rating]', "5") %> 5&nbsp&nbsp
+
+  <br><label>Location Rating:</label>&nbsp&nbsp
+  <%= radio_button_tag(:'review[location_rating]', "1") %> 1&nbsp&nbsp
+  <%= radio_button_tag(:'review[location_rating]', "2") %> 2&nbsp&nbsp
+  <%= radio_button_tag(:'review[location_rating]', "3") %> 3&nbsp&nbsp
+  <%= radio_button_tag(:'review[location_rating]', "4") %> 4&nbsp&nbsp
+  <%= radio_button_tag(:'review[location_rating]', "5") %> 5&nbsp&nbsp
+
+  <br><label>Value Rating</label>&nbsp&nbsp
+  <%= radio_button_tag(:'review[value_rating]', "1") %> 1&nbsp&nbsp
+  <%= radio_button_tag(:'review[value_rating]', "2") %> 2&nbsp&nbsp
+  <%= radio_button_tag(:'review[value_rating]', "3") %> 3&nbsp&nbsp
+  <%= radio_button_tag(:'review[value_rating]', "4") %> 4&nbsp&nbsp
+  <%= radio_button_tag(:'review[value_rating]', "5") %> 5&nbsp&nbsp
+
+  <br><label>Comments (Optional):</label><br>
+  <%= text_field_tag :'review[comments]', nil, class: 'input-large'%><br>
+
+<br>
+
+  <%= submit_tag "Submit Review" %>
+<% end %>

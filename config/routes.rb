@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'reviews/show'
-  get 'reviews/index'
-  get 'reviews/new'
-  get 'reviews/edit'
-  get 'reviews/delete'
-  get 'stays/create'
+  # get 'reviews/show'
+  # get 'reviews/index'
+  # get 'reviews/new'
+  # get 'reviews/edit'
+  # get 'reviews/delete'
+  # get 'stays/create'
   # get 'houses/index'
   # get 'houses/create'
   # get 'houses/new'
@@ -26,7 +26,9 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
-  resources :users
+  resources :users, only: [:show, :index, :new, :edit, :create, :update] do
+    resources :reviews
+  end
   resources :houses
   resources :stays, only: [:create]
 
