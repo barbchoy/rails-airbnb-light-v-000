@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_04_10_025105) do
     t.integer "value_rating"
     t.text "comments"
     t.integer "house_id"
-    t.integer "guest_id"
+    t.integer "user_id"
   end
 
   create_table "stays", force: :cascade do |t|

@@ -6,7 +6,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :value_rating
       t.text :comments
       t.integer :house_id
-      t.integer :guest_id
+      t.integer :user_id
     end
   end
 end

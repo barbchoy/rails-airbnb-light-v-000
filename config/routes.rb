@@ -29,7 +29,14 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :index, :new, :edit, :create, :update] do
     resources :reviews
   end
+
+  resources :houses, only: [:show, :index] do
+    resources :reviews, only: [:show, :index]
+  end
+
+
   resources :houses
+  resources :reviews
   resources :stays, only: [:create]
 
   get '/signup', to: "users#new"

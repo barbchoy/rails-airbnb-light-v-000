@@ -32,6 +32,6 @@
 
 <br>
   <%= hidden_field_tag(:'review[house_id]', @house.id) %>
-  <%= hidden_field_tag(:'review[guest_id]', current_user.id) %>
+  <%= hidden_field_tag(:'review[user_id]', current_user.id) %>
   <%= submit_tag "Submit Review" %>
 <% end %>
