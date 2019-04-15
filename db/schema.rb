@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 2019_04_10_025105) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.decimal "cleanliness_rating"
-    t.decimal "location_rating"
-    t.decimal "value_rating"
+    t.integer "cleanliness_rating"
+    t.integer "location_rating"
+    t.integer "value_rating"
     t.text "comments"
     t.integer "house_id"
-    t.integer "user_id"
+    t.integer "guest_id"
   end
 
   create_table "stays", force: :cascade do |t|

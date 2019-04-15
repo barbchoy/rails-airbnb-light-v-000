@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to @review
     else
+      @house = House.find_by_id(params[:review][:house_id])
       render :new
     end
   end
@@ -29,6 +30,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:cleanliness_rating, :location_rating, :value_rating, :comments, :user_id, :house_id)
+    params.require(:review).permit(:cleanliness_rating, :location_rating, :value_rating, :comments, :house_id, :guest_id)
   end
 end

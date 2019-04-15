@@ -1,4 +1,4 @@
-<h1>Reviews#new</h1>
+<h1>Reviews for your stay in <%=@house.name%></h1>
 <p>Find me in app/views/reviews/new.html.erb</p>
 
 <h1>Please rate the following.</h1>
@@ -31,6 +31,7 @@
   <%= text_field_tag :'review[comments]', nil, class: 'input-large'%><br>
 
 <br>
-  <%= hidden_field_tag(:house_id, @house.id) %>
+  <%= hidden_field_tag(:'review[house_id]', @house.id) %>
+  <%= hidden_field_tag(:'review[guest_id]', current_user.id) %>
   <%= submit_tag "Submit Review" %>
 <% end %>

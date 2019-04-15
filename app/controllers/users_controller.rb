@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :balance, :guests, :pets )
+    params.require(:user).permit(:email, :balance, :guests, :pets, reviews_attributes: [:cleanliness_rating, :location_rating, :value_rating, :comments, :house_id, :guest_id]  )
   end
 
 
