@@ -1,6 +1,6 @@
-<h2>My review of <%= @review.house.name %></h2>
-
-<p>Cleanliness Rating: <%= @review.cleanliness_rating %></p>
-<p>Cleanliness Rating: <%= @review.location_rating %></p>
-<p>Cleanliness Rating: <%= @review.value_rating %></p>
-<p>Comments: <%= @review.comments %></p>
+<h2>My review of <%= review.house.name %></h2>
+<p>by <%=review.user.name %></p>
+<p>Cleanliness Rating: <%= review.cleanliness_rating %></p>
+<p>Cleanliness Rating: <%= review.location_rating %></p>
+<p>Cleanliness Rating: <%= review.value_rating %></p>
+<p>Comments: <%= review.comments %></p>

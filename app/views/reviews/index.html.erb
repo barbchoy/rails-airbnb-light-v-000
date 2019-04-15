@@ -4,5 +4,5 @@
 
 
 <% @reviews.each do |review| %>
-  <%= render 'review' %>
+  <%= render partial: 'review', locals: {review: review} %>
 <% end %>

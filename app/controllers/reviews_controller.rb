@@ -19,7 +19,6 @@ class ReviewsController < ApplicationController
 
   def index
     if params[:user_id]
-      binding.pry
       @user = User.find_by_id(params[:user_id])
       @reviews = @user.reviews
     elsif params[:house_id]
@@ -37,6 +36,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    binding.pry
     if @review.save
       redirect_to @review
     else
