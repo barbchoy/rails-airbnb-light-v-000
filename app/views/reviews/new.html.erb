@@ -31,6 +31,6 @@
   <%= text_field_tag :'review[comments]', nil, class: 'input-large'%><br>
 
 <br>
-
+  <%= hidden_field_tag(:house_id, @house.id) %>
   <%= submit_tag "Submit Review" %>
 <% end %>
