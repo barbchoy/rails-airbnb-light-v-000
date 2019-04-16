@@ -36,7 +36,6 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    binding.pry
     if @review.save
       redirect_to @review
     else
@@ -54,6 +53,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:cleanliness_rating, :location_rating, :value_rating, :comments, :house_id, :user_id)
+    params.require(:review).permit(:title, :cleanliness_rating, :location_rating, :value_rating, :comments, :house_id, :user_id)
   end
 end

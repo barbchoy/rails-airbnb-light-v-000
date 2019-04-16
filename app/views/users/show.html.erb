@@ -7,8 +7,11 @@
 <% else %>
   <%= render partial: 'form', locals: {user: @user} %>
   <%= link_to "Edit Profile", edit_user_path(@user) %>&nbsp&nbsp&nbsp&nbsp
+  <%= link_to "See All My Reviews", user_reviews_path(@user) %>&nbsp&nbsp&nbsp&nbsp
 <% end %>
-<%= link_to "See All Houses", "/houses" %><br><br>
+<br><br><%= link_to "See All Houses", "/houses" %>&nbsp&nbsp&nbsp&nbsp
+<br><br>
+
 
 <% if @message %>
 <%= @message %>

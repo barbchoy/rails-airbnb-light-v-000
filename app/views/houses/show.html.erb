@@ -8,8 +8,11 @@
 <p>Overall Location rating: <%=@house.location_rating%></p>
 <p>Overall Value rating: <%=@house.value_rating%></p>
 <p>Pets allowed: <%="Yes" if @house.pets_allowed%><%="No" if !@house.pets_allowed%></p>
-<p>Total number of reviews:<%=@house.reviews.count%>
-<%= link_to "See all reviews", house_reviews_path(@house)%></p><br><br>
+<p>Total number of reviews: <%=@house.reviews.count%>
+<% if @house.reviews.count !=0 %>
+<%= link_to "See all reviews", house_reviews_path(@house)%></p>
+<% end %>
+<br><br>
 
 
 <%= form_tag stays_path, method: :post  do %>
@@ -23,7 +26,7 @@
               data: { confirm: 'Are you sure?' } %><br><br>
 <% elsif !current_user.owner %>
   <label>How many days are you going to stay?</label>
-  <%= text_field_tag :days %><br>
+  <%= text_field_tag :days %>&nbsp
   <%= submit_tag "Book This House"%>
 <% end %>
 

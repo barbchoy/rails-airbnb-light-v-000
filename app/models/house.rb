@@ -10,19 +10,16 @@ class House < ApplicationRecord
   accepts_nested_attributes_for :reviews
 
   def cleanliness_rating
-    0
+    self.reviews.average(:cleanliness_rating)
   end
 
   def location_rating
-    0
+    self.reviews.average(:location_rating)
   end
 
   def value_rating
-    0
+    self.reviews.average(:value_rating)
   end
 
-  def reviews_count
-    0
-  end
 
 end

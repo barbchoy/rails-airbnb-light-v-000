@@ -6,3 +6,7 @@
 <% @reviews.each do |review| %>
   <%= render partial: 'review', locals: {review: review} %>
 <% end %>
+
+<%= link_to "Back to My Profile", user_path(current_user) %>&nbsp&nbsp
+
+<%= link_to "Back to All Houses", houses_path %>

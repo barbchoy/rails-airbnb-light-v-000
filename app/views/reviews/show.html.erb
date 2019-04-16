@@ -2,3 +2,5 @@
 <p>Find me in app/views/reviews/show.html.erb</p>
 
 <%= render partial: 'review', locals: {review: @review} %>
+
+<%= link_to "Back to My Profile", user_path(current_user) %>
