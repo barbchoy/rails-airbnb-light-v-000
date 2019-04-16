@@ -4,9 +4,12 @@
 
 <p>Price Per Night: $<%=@house.price_per_night%></p>
 <p>Max guests: <%=@house.max_guests%></p>
-<p>Overall Cleaniless rating: <%=@house.cleanliness_rating%></p>
-<p>Overall Location rating: <%=@house.location_rating%></p>
-<p>Overall Value rating: <%=@house.value_rating%></p>
+<% if @house.reviews.count !=0 %>
+<p>Average Cleaniless rating: <%@house.cleanliness_rating.round.times do %>&#9733<% end %></p>
+<p>Average Location rating: <%@house.location_rating.round.times do %>&#9733<% end %></p>
+<p>Average Value rating: <%@house.value_rating.round.times do %>&#9733<% end %></p>
+<p>Overall Rating: <%@house.overall_rating.round.times do %>&#9733<% end %></p>
+<% end %>
 <p>Pets allowed: <%="Yes" if @house.pets_allowed%><%="No" if !@house.pets_allowed%></p>
 <p>Total number of reviews: <%=@house.reviews.count%>
 <% if @house.reviews.count !=0 %>

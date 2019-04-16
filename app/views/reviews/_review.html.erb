@@ -1,7 +1,7 @@
 <h2><%= review.title %></h2>
 <p><%= review.house.name %></p>
 <p>by <%=review.user.name %> on <%=review.created_at %></p>
-<p>Cleanliness Rating: <%= review.cleanliness_rating %></p>
-<p>Cleanliness Rating: <%= review.location_rating %></p>
-<p>Cleanliness Rating: <%= review.value_rating %></p>
+<p>Cleanliness Rating: <% review.cleanliness_rating.round.times do %>&#9733<% end %></p>
+<p>Cleanliness Rating: <% review.location_rating.round.times do %>&#9733<% end %></p>
+<p>Cleanliness Rating: <% review.value_rating.round.times do %>&#9733<% end %></p>
 <p>Comments: <%= review.comments %></p>
