@@ -12,4 +12,4 @@ $ <%= text_field_tag :'house[price_per_night]', value=@house.price_per_night%><b
 
 <label>Are pets allowed? </label>
 <%= hidden_field_tag :'house[pets_allowed]', false %>
-<%= check_box_tag :'house[pets_allowed]', value=@house.pets_allowed %><br>
+<%= check_box_tag :'house[pets_allowed]', true, @house.pets_allowed %><br>

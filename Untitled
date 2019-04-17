@@ -1,0 +1,6 @@
+<%=form_tag houses_path do %>
+<label>Price: </label> <%= text_field_tag :'house[min_guests]'%>
+<label>Min guests: </label> <%= text_field_tag :'house[min_guests]'%>
+<label>Pets: </label> <%= text_field_tag :'house[min_guests]'%>
+<label>Has reviews: </label> <%= text_field_tag :'house[min_guests]'%>
+<%= submit_tag "Search" %>

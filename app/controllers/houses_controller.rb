@@ -1,12 +1,33 @@
 class HousesController < ApplicationController
   def index
+
     @houses = House.all
+    if params[:price_per_night]=="High to Low"
+      @houses = @houses.sort_by_price_per_night_desc
+    elsif params[:price_per_night]=="Low to High"
+      @houses = @houses.sort_by_price_per_night_asc
+    end
+
+    if params[:pets_allowed] == "Yes"
+      @houses = @houses.pets_ok
+    elsif params[:pets_allowed] == "No"
+      @houses = @houses.pets_not_ok
+    end
+
+    if params[:max_guests]!=""
+      @houses = @houses.mininum_guest(params[:max_guests])
+    end
+
+    if params[:city]
+      @houses = @houses.in_location(params[:city])
+    end
   end
 
   def create
     @house = House.create(house_params)
     @house.owner = current_user
     @house.save
+    binding.pry
     redirect_to house_path(@house)
   end
 

@@ -7,6 +7,13 @@ class House < ApplicationRecord
   belongs_to :owner, :class_name => "User"
   has_many :reviews
 
+  scope :sort_by_price_per_night_asc, -> {order(:price_per_night)}
+  scope :sort_by_price_per_night_desc, -> {order(price_per_night: :desc)}
+  scope :pets_ok, -> {where("pets_allowed = ?", true)}
+  scope :pets_not_ok, -> {where("pets_allowed = ?", false)}
+  scope :mininum_guest, -> (guests) {where("max_guests >= ?", guests)}
+  scope :in_location, -> (city) {where("city = ?", city)}
+
   accepts_nested_attributes_for :reviews
 
   def cleanliness_rating
@@ -27,29 +34,7 @@ class House < ApplicationRecord
     overall.round
   end
 
-  def sort_by_price_per_night_asc
-    self.order(:price_per_night)
-  end
 
-  def sort_by_price_per_night_desc
-    self.reverse_order(:price_per_night)
-  end
-
-  def pets_ok
-    self.where("pets_allowed = ?", true)
-  end
-
-  def mininum_guest(guests)
-    self.where("max_guests = ?", params[guests])
-  end
-
-  def has_reviews
-    self.joins("reviews on reviews.house_id = id").distinct
-  end
-
-  def in_location(city)
-    self.where("city = ?", params[city])
-  end
 
 
 end

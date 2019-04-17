@@ -17,5 +17,5 @@
 <%= @message %>
 <% end %>
 <% if @house && @message.include?("Thank you")%>
-    &nbsp&nbsp<%= link_to "Write a review", new_user_review_path(@user, house_id: "#{@house}")%>
+    &nbsp&nbsp<%= link_to "Write a review", new_house_review_path(@house)%>
 <% end %>

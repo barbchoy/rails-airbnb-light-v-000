@@ -26,17 +26,20 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
-  resources :users, only: [:show, :index, :new, :edit, :create, :update] do
-    resources :reviews
-  end
+  resources :users
+  resources :houses
 
-  resources :houses, only: [:show, :index] do
+  resources :users, only: [:show, :index] do
     resources :reviews, only: [:show, :index]
   end
 
+  resources :houses, only: [:show, :index] do
+    resources :reviews, only: [:show, :index, :new, :create]
+  end
 
+  resources :users
   resources :houses
-  resources :reviews
+  resources :reviews, only: [:show]
   resources :stays, only: [:create]
 
   get '/signup', to: "users#new"

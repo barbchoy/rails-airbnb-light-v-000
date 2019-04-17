@@ -1,9 +1,8 @@
 <% if !current_user.owner %>
 <%=render partial: 'users/form', locals: {user: current_user} %>
 <% end %>
-<h1>Houses#index</h1>
+<h1>Houses For Rent</h1>
 
-<p>Find me in app/views/houses/index.html.erb</p>
 <% @houses.each do |house| %>
 
   <p><%=house.name%> , max <%=house.max_guests%> guests, $<%=house.price_per_night%> per night, Pets allowed: <%="Yes" if house.pets_allowed%><%="No" if !house.pets_allowed%>
@@ -16,4 +15,14 @@
 <% end %>
 <% if current_user.owner == true %>
   <%= link_to "Add A New House", new_house_path %>
+<% end %>
+
+<br><br>
+<h4>Filter by:</h4>
+<%= form_tag houses_path, method: :get do %>
+<label>Sort by price: </label> <%= select_tag :price_per_night, options_for_select(["","High to Low", "Low to High"])%>
+<label>Number of guests: </label> <%= text_field_tag :max_guests%><br>
+<label>Pets allowed: </label> <%= select_tag :pets_allowed, options_for_select(["Don't care","Yes", "No"])%>
+<label>City: </label> <%= select_tag :city, options_for_select(House.all.collect{|p| p.city }.uniq), :disabled => false, :include_blank => "Please choose a city" %><br>
+<%= submit_tag "Search" %>
 <% end %>
