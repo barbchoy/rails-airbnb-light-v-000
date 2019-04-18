@@ -1,7 +1,5 @@
 class HousesController < ApplicationController
   def index
-
-    binding.pry
     @houses = House.all
     if params[:price_per_night]=="High to Low"
       @houses = @houses.sort_by_price_per_night_desc
@@ -12,16 +10,19 @@ class HousesController < ApplicationController
     if params[:pets_allowed] == "Yes"
       @houses = @houses.pets_ok
     elsif params[:pets_allowed] == "No"
+
       @houses = @houses.pets_not_ok
     end
 
-    if params[:max_guests]!=""
+    if params[:max_guests]!="" && params[:max_guests]
       @houses = @houses.mininum_guest(params[:max_guests])
     end
 
-    if params[:city]
+    if params[:city] && params[:city]!=""
+      binding.pryq
       @houses = @houses.in_location(params[:city])
     end
+
   end
 
   def create
