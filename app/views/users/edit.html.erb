@@ -1,3 +1,14 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <p>There were some errors: </p>
+    <ul>
+      <%@user.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+      <%end%>
+      </ul>
+      </div>
+<% end %>
+
 <%= form_tag user_path(@user), method: :patch do%>
 <%= render 'user' %>
 <%= submit_tag "Update Profile" %>

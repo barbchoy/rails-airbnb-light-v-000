@@ -8,12 +8,15 @@ class UsersController < ApplicationController
         password: params[:user][:password],
         owner: params[:user][:owner])
 
-    log_in(@user)
-
-    if !@user.owner
-      redirect_to edit_user_path(@user)
+    if @user.valid?
+      log_in(@user)
+      if !@user.owner
+        redirect_to edit_user_path(@user)
+      else
+        redirect_to user_path(@user)
+      end
     else
-      redirect_to user_path(@user)
+      render 'new'
     end
   end
 
@@ -32,6 +35,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    binding.pry
     if @user.update_attributes(user_params)
       redirect_to user_path(@user)
     else

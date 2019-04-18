@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
 
-  # validates :name, presence: true, message: "Name must not be blank."
-  # validates :email, uniqueness: true, message: "There is already an account associated with this email address. Please use another email address."
-  # validates :password, presence: true, message: "Password must not be blank."
+  has_secure_password
+
+  validates :name, presence: true
+  validates :email, uniqueness: true, allow_blank: true, case_sensitive: false
 
   has_many :stays
   has_many :houses, through: :stays
@@ -11,6 +12,6 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :reviews
 
-  has_secure_password
+
 
 end

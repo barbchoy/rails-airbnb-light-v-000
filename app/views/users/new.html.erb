@@ -1,6 +1,16 @@
 <h1>New User Sign Up</h1>
 
 <%= form_tag users_path do %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <p>There were some errors: </p>
+      <ul>
+        <%@user.errors.full_messages.each do |message|%>
+        <li><%= message %></li>
+        <%end%>
+        </ul>
+        </div>
+  <% end %>
   <label>Name:</label><br>
   <%= text_field_tag :'user[name]' %><br>
 

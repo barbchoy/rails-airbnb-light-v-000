@@ -1,6 +1,7 @@
 class HousesController < ApplicationController
   def index
 
+    binding.pry
     @houses = House.all
     if params[:price_per_night]=="High to Low"
       @houses = @houses.sort_by_price_per_night_desc
