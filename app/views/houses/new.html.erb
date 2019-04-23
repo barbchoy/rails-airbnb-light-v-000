@@ -2,6 +2,16 @@
 <p>Find me in app/views/houses/new.html.erb</p>
 
 <%=form_tag houses_path do %>
+<% if @house.errors.any? %>
+  <div id="error_explanation">
+    <p>There were some errors: </p>
+    <ul>
+      <%@house.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+      <%end%>
+      </ul>
+      </div>
+    <%end%>
 <%= render 'house' %>
 <%= submit_tag "Create House" %>
 

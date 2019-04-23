@@ -27,8 +27,11 @@ class HousesController < ApplicationController
   def create
     @house = House.create(house_params)
     @house.owner = current_user
-    @house.save
-    redirect_to house_path(@house)
+    if @house.save
+      redirect_to house_path(@house)
+    else
+      render 'new'
+    end
   end
 
   def new
