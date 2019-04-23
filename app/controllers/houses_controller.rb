@@ -19,7 +19,6 @@ class HousesController < ApplicationController
     end
 
     if params[:city] && params[:city]!=""
-      binding.pryq
       @houses = @houses.in_location(params[:city])
     end
 
@@ -29,7 +28,6 @@ class HousesController < ApplicationController
     @house = House.create(house_params)
     @house.owner = current_user
     @house.save
-    binding.pry
     redirect_to house_path(@house)
   end
 
